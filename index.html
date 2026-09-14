@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jimmy Nsubuga • Editorial Systems Lead &amp; Digital Journalist</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+    body { background-color: #0a0b0d; color: #f1f5f9; padding: 32px 18px; display: flex; justify-content: center; }
+    .page-container { width: 100%; max-width: 900px; }
+    
+    /* Header / Hero Section */
+    .hero-card { background: #131518; border: 1px solid #23272e; border-radius: 12px; padding: 36px 32px; margin-bottom: 28px; display: flex; align-items: center; gap: 32px; flex-wrap: wrap; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4); }
+    @media (max-width: 680px) { .hero-card { flex-direction: column; text-align: center; padding: 24px 20px; } }
+    
+    .hero-avatar { width: 130px; height: 130px; border-radius: 50%; background-size: cover; background-position: center; border: 3px solid #da291c; flex-shrink: 0; }
+    .hero-content { flex-grow: 1; }
+    .hero-badge { display: inline-block; background: rgba(218, 41, 28, 0.15); color: #da291c; font-size: 11px; font-weight: 800; padding: 4px 10px; border-radius: 4px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px; border: 1px solid rgba(218, 41, 28, 0.3); }
+    .hero-content h1 { font-size: 28px; font-weight: 900; color: #ffffff; letter-spacing: -0.5px; margin-bottom: 6px; }
+    .hero-content h2 { font-size: 14.5px; font-weight: 600; color: #94a3b8; margin-bottom: 14px; }
+    .hero-content p { font-size: 13.5px; color: #cbd5e1; line-height: 1.5; }
+
+    /* Editorial Credibility Strip */
+    .credibility-strip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 28px; }
+    @media (max-width: 768px) { .credibility-strip { grid-template-columns: 1fr; } }
+    .cred-box { background: #131518; border: 1px solid #23272e; border-radius: 8px; padding: 18px; text-align: center; }
+    .cred-outlet { font-size: 15px; font-weight: 800; color: #ffffff; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .cred-desc { font-size: 12px; color: #9ca3af; }
+
+    /* Section Styles */
+    .section-container { background: #131518; border: 1px solid #23272e; border-radius: 12px; padding: 28px 32px; margin-bottom: 28px; }
+    .section-title { font-size: 14px; font-weight: 800; text-transform: uppercase; letter-spacing: 1.2px; color: #fbe122; margin-bottom: 20px; display: flex; align-items: center; gap: 8px; }
+
+    /* Experience Grid */
+    .exp-item { margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid #1c1f24; }
+    .exp-item:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+    .exp-role { font-size: 15px; font-weight: 800; color: #ffffff; margin-bottom: 4px; }
+    .exp-org { font-size: 13px; font-weight: 700; color: #da291c; margin-bottom: 8px; }
+    .exp-list { padding-left: 18px; font-size: 13px; color: #cbd5e1; line-height: 1.6; }
+    .exp-list li { margin-bottom: 6px; }
+
+    /* Links Grid */
+    .links-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    @media (max-width: 600px) { .links-grid { grid-template-columns: 1fr; } }
+    .link-card { background: #181b21; border: 1px solid #2a2f3d; border-radius: 8px; padding: 16px; text-decoration: none; display: flex; flex-direction: column; gap: 6px; transition: border-color 0.15s ease; }
+    .link-card:hover { border-color: #da291c; }
+    .link-card-title { font-size: 13.5px; font-weight: 800; color: #ffffff; display: flex; align-items: center; justify-content: space-between; }
+    .link-card-url { font-size: 11.5px; color: #9ca3af; word-break: break-all; }
+
+    /* Skills Badges */
+    .skills-flex { display: flex; flex-wrap: wrap; gap: 8px; }
+    .skill-pill { background: #181b21; border: 1px solid #2a2f3d; color: #e2e8f0; font-size: 12px; font-weight: 600; padding: 6px 12px; border-radius: 6px; }
+
+    /* Footer Call to Action */
+    .cta-card { background: linear-gradient(135deg, #131518 0%, #1a1012 100%); border: 1px solid #da291c; border-radius: 12px; padding: 32px; text-align: center; }
+    .cta-card h3 { font-size: 20px; font-weight: 900; color: #ffffff; margin-bottom: 8px; }
+    .cta-card p { font-size: 13.5px; color: #94a3b8; margin-bottom: 20px; }
+    .cta-btn { display: inline-block; background: #da291c; color: #ffffff; font-size: 13px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; padding: 12px 28px; border-radius: 6px; text-decoration: none; transition: background 0.15s ease; }
+    .cta-btn:hover { background: #b91c1c; }
+  </style>
+</head>
+<body>
+  <div class="page-container">
+    
+    <!-- HERO SECTION -->
+    <header class="hero-card">
+      <div class="hero-avatar" style="background-image: url('Profile Photo.jpg');"></div>
+      <div class="hero-content">
+        <span class="hero-badge">Editorial Systems Lead &amp; Journalist</span>
+        <h1>Jimmy Nsubuga</h1>
+        <h2>London, UK • NCTJ-Qualified</h2>
+        <p>Innovative founder and editorial systems lead with extensive newsroom experience at Yahoo and Metro, specializing in AI-assisted publishing workflows, SEO prompt engineering, and automated content distribution systems.</p>
+      </div>
+    </header>
+
+    <!-- CREDIBILITY PROOF STRIP -->
+    <section class="credibility-strip">
+      <div class="cred-box">
+        <div class="cred-outlet">Yahoo.co.uk</div>
+        <div class="cred-desc">Online Journalist &amp; Editor</div>
+      </div>
+      <div class="cred-box">
+        <div class="cred-outlet">Metro.co.uk</div>
+        <div class="cred-desc">News Reporter &amp; Feature Writer</div>
+      </div>
+      <div class="cred-box">
+        <div class="cred-outlet">NewsNavi / TrendWire</div>
+        <div class="cred-desc">Founder &amp; Systems Architect</div>
+      </div>
+    </section>
+
+    <!-- PROFESSIONAL BACKGROUND -->
+    <section class="section-container">
+      <div class="section-title">💼 Professional Experience &amp; Impact</div>
+      
+      <div class="exp-item">
+        <div class="exp-role">Founder &amp; Editorial Systems Lead</div>
+        <div class="exp-org">NewsNavi / TrendWire Media / South London News &amp; Media</div>
+        <ul class="exp-list">
+          <li>Architected and deployed AI-assisted publishing and editorial workflow systems to enable scalable digital news production.</li>
+          <li>Engineered automated social media and content distribution pipelines, achieving 900 Google clicks and 84k impressions within 3 months for Trend Wire Media.</li>
+          <li>Developed prompt-engineering workflows for high-impact SEO, local news, and entertainment reporting.</li>
+        </ul>
+      </div>
+
+      <div class="exp-item" style="margin-top: 20px;">
+        <div class="exp-role">Online Journalist &amp; Editor</div>
+        <div class="exp-org">Yahoo.co.uk</div>
+        <ul class="exp-list">
+          <li>Reported on breaking news, sports, entertainment, and major live events for significant digital audiences.</li>
+          <li>Generated original story ideas, conducted interviews, and edited copy for clarity, accuracy, and search engine optimization.</li>
+        </ul>
+      </div>
+
+      <div class="exp-item" style="margin-top: 20px;">
+        <div class="exp-role">News Reporter</div>
+        <div class="exp-org">Metro.co.uk</div>
+        <ul class="exp-list">
+          <li>Produced breaking news and feature content across multiple digital platforms under stringent newsroom deadlines.</li>
+          <li>Cultivated deep expertise in crafting compelling headlines, maximizing engagement, and managing fast-paced CMS publishing.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ARCHIVES & BYLINES -->
+    <section class="section-container">
+      <div class="section-title">📰 Verified Byline Archives</div>
+      <div class="links-grid">
+        <a href="https://www.yahoo.com/author/jimmy-nsubuga/" target="_blank" class="link-card">
+          <div class="link-card-title">Yahoo Author Archive <span>↗</span></div>
+          <div class="link-card-url">yahoo.com/author/jimmy-nsubuga/</div>
+        </a>
+        <a href="https://metro.co.uk/author/jimmy-nsubuga-ukmetro/" target="_blank" class="link-card">
+          <div class="link-card-title">Metro Author Archive <span>↗</span></div>
+          <div class="link-card-url">metro.co.uk/author/jimmy-nsubuga-ukmetro/</div>
+        </a>
+      </div>
+    </section>
+
+    <!-- CORE SKILLS -->
+    <section class="section-container">
+      <div class="section-title">⚡ Core Competencies</div>
+      <div class="skills-flex">
+        <span class="skill-pill">AI-Assisted Publishing</span>
+        <span class="skill-pill">Prompt Engineering</span>
+        <span class="skill-pill">Editorial Operations</span>
+        <span class="skill-pill">SEO Strategy &amp; Analytics</span>
+        <span class="skill-pill">Content Automation</span>
+        <span class="skill-pill">NCTJ-Qualified</span>
+        <span class="skill-pill">WordPress &amp; CMS</span>
+        <span class="skill-pill">Breaking News &amp; Sub-editing</span>
+      </div>
+    </section>
+
+    <!-- FOOTER CTA -->
+    <footer class="cta-card">
+      <h3>Ready to Scale Your Digital Publishing?</h3>
+      <p>Get in touch to discuss collaboration, advisory, or content systems integration.</p>
+      <a href="mailto:jmmynsubuga@gmail.com" class="cta-btn">Contact Jimmy</a>
+    </footer>
+
+  </div>
+</body>
+</html>
