@@ -1,63 +1,75 @@
-<!DOCTYPE html>
-<html lang="en-GB">
-<head>
+<!DOCTYPE html><html lang="en-GB"><head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Run My Brief • Editorial Systems Lead &amp; Journalist</title>
-
+  <title>Run My Brief • Lead-Intake Funnels for Finance Creators</title>
   <!-- Favicon Configuration -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'><stop offset='0%25' stop-color='%23222f3e'/><stop offset='50%25' stop-color='%230f172a'/><stop offset='100%25' stop-color='%23090d16'/></linearGradient></defs><rect width='100' height='100' rx='24' fill='url(%23bg)' stroke='%23384556' stroke-width='4'/><text x='50%25' y='64' font-size='38' font-weight='800' font-family='-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif' text-anchor='middle' fill='%23ffffff' letter-spacing='1.5'>RMB</text></svg>">
-
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
     body { background-color: #f8f9fc; color: #111827; padding: 40px 20px; display: flex; justify-content: center; }
-    .site-container { width: 100%; max-width: 960px; }
+    .site-container { width: 100%; max-width: 980px; }
 
     /* Header Nav */
     .site-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 32px; padding: 0 4px; }
     .brand-logo { font-size: 16px; font-weight: 800; color: #111827; text-decoration: none; letter-spacing: -0.3px; }
-    .nav-links { display: flex; gap: 24px; }
+    .nav-links { display: flex; gap: 20px; align-items: center; }
     .nav-links a { font-size: 14px; font-weight: 600; color: #4b5563; text-decoration: none; transition: color 0.15s ease; }
     .nav-links a:hover { color: #111827; }
+    .nav-btn { background: #111827; color: #ffffff !important; padding: 8px 16px; border-radius: 10px; font-size: 13px !important; font-weight: 700 !important; }
+    .nav-btn:hover { background: #1f2937; }
 
-    /* Main Balanced Layout */
+    /* Main Grid */
     .main-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; align-items: start; }
-    @media (max-width: 820px) { .main-grid { grid-template-columns: 1fr; } }
+    @media (max-width: 860px) { .main-grid { grid-template-columns: 1fr; } }
 
-    /* Left Column: Hero & Integrated Professional Background */
-    .left-column { display: flex; flex-direction: column; gap: 28px; }
-
+    /* Left Column: Hero & Narrative */
+    .left-column { display: flex; flex-direction: column; gap: 24px; }
     .hero-panel { background: #eef2f6; border-radius: 20px; padding: 36px 32px; border: 1px solid #e2e8f0; }
-    .hero-avatar { width: 64px; height: 64px; border-radius: 50%; overflow: hidden; margin-bottom: 20px; border: 2px solid #ffffff; box-shadow: 0 4px 12px rgba(0,0,0,0.08); background: #111827; display: flex; align-items: center; justify-content: center; color: #ffffff; font-weight: 900; font-size: 18px; letter-spacing: -0.5px; }
+    .status-badge { display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; background: #e2e8f0; border-radius: 20px; font-size: 12px; font-weight: 700; color: #0f172a; margin-bottom: 16px; }
+    .status-dot { width: 7px; height: 7px; border-radius: 50%; background: #10b981; }
+    .hero-title { font-size: 30px; font-weight: 800; color: #111827; line-height: 1.2; letter-spacing: -0.8px; margin-bottom: 16px; }
+    .hero-bio { font-size: 14.5px; color: #4b5563; line-height: 1.6; margin-bottom: 20px; }
     
-    .hero-title { font-size: 32px; font-weight: 800; color: #111827; line-height: 1.15; letter-spacing: -1px; margin-bottom: 18px; }
-    .hero-bio { font-size: 14.5px; color: #4b5563; line-height: 1.6; margin-bottom: 24px; }
-    .hero-signature { font-size: 13.5px; font-weight: 700; color: #111827; }
+    /* Comparison Card */
+    .compare-card { background: #ffffff; border: 1px solid #e5e7eb; border-radius: 20px; padding: 28px; }
+    .section-heading { font-size: 13px; font-weight: 800; color: #6b7280; margin-bottom: 16px; letter-spacing: 0.5px; text-transform: uppercase; }
+    .friction-row { display: flex; flex-direction: column; gap: 14px; }
+    .friction-item { padding: 12px 14px; border-radius: 12px; font-size: 13.5px; line-height: 1.45; }
+    .friction-bad { background: #fef2f2; border: 1px solid #fee2e2; color: #991b1b; }
+    .friction-good { background: #f0fdf4; border: 1px solid #dcfce7; color: #166534; }
 
-    /* Integrated Experience Card in Left Column */
-    .creds-container { background: #ffffff; border: 1px solid #e5e7eb; border-radius: 20px; padding: 32px; }
-    .section-heading { font-size: 15px; font-weight: 800; color: #111827; margin-bottom: 20px; letter-spacing: -0.3px; text-transform: uppercase; }
-    .cred-item { margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid #f3f4f6; }
-    .cred-item:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
-    .cred-role { font-size: 14.5px; font-weight: 800; color: #111827; margin-bottom: 2px; }
-    .cred-org { font-size: 12.5px; font-weight: 700; color: #dc2626; margin-bottom: 6px; }
-    .cred-desc { font-size: 13px; color: #4b5563; line-height: 1.5; }
+    /* Pricing Panel */
+    .pricing-card { background: #111827; color: #ffffff; border-radius: 20px; padding: 28px; border: 1px solid #1f2937; }
+    .pricing-price { font-size: 32px; font-weight: 900; margin: 8px 0; color: #38bdf8; letter-spacing: -0.5px; }
+    .pricing-desc { font-size: 13px; color: #9ca3af; line-height: 1.5; margin-bottom: 18px; }
+    .pricing-features { list-style: none; display: flex; flex-direction: column; gap: 8px; font-size: 13px; color: #e5e7eb; }
+    .pricing-features li::before { content: "✓ "; color: #38bdf8; font-weight: 800; }
 
-    /* Right Portfolio / Work Grid */
-    .work-grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
+    /* Right Column: Work Grid */
+    .work-grid { display: flex; flex-direction: column; gap: 18px; }
+    .work-card { background: #ffffff; border: 1px solid #e5e7eb; border-radius: 20px; padding: 22px; text-decoration: none; display: flex; flex-direction: column; gap: 12px; transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease; }
+    .work-card:hover { transform: translateY(-2px); border-color: #cbd5e1; box-shadow: 0 8px 20px rgba(0,0,0,0.05); }
     
-    .work-card { background: #ffffff; border: 1px solid #e5e7eb; border-radius: 20px; padding: 24px; text-decoration: none; display: flex; flex-direction: column; gap: 14px; transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease; box-shadow: 0 2px 8px rgba(0,0,0,0.02); }
-    .work-card:hover { transform: translateY(-2px); border-color: #cbd5e1; box-shadow: 0 8px 24px rgba(0,0,0,0.06); }
+    .work-visual { width: 100%; height: 110px; border-radius: 12px; display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; color: #ffffff; padding: 12px; text-align: center; }
+    .work-visual.land-bg { background: linear-gradient(135deg, #064e3b 0%, #022c22 100%); }
+    .work-visual.wealth-bg { background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%); }
+    .work-visual.debt-bg { background: linear-gradient(135deg, #701a75 0%, #3b0764 100%); }
     
-    .work-visual { width: 100%; height: 140px; border-radius: 12px; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
-    .work-visual.yahoo-bg { background: #6001d2; color: #ffffff; font-weight: 900; font-size: 26px; letter-spacing: -0.5px; }
-    .work-visual.metro-bg { background: #e31837; color: #ffffff; font-family: serif; font-weight: 700; text-transform: uppercase; font-size: 30px; letter-spacing: 1px; }
-    .work-visual.newsnavi-bg { background: #111827; color: #ffffff; font-weight: 900; font-size: 26px; letter-spacing: -0.5px; }
-    
-    .work-meta h3 { font-size: 15px; font-weight: 800; color: #111827; margin-bottom: 4px; display: flex; justify-content: space-between; align-items: center; }
-    .work-meta p { font-size: 13px; color: #6b7280; line-height: 1.4; }
+    .visual-tag { font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; color: #6ee7b7; margin-bottom: 4px; }
+    .visual-title { font-size: 19px; font-weight: 900; letter-spacing: -0.3px; }
 
-    /* Footer contact */
+    .work-meta h3 { font-size: 15px; font-weight: 800; color: #111827; display: flex; justify-content: space-between; align-items: center; }
+    .work-meta p { font-size: 13px; color: #6b7280; line-height: 1.45; margin-top: 4px; }
+
+    /* Prototype Request Form Card */
+    .request-card { background: #ffffff; border: 1px solid #e5e7eb; border-radius: 20px; padding: 24px; margin-top: 6px; }
+    .form-group { margin-bottom: 12px; }
+    .form-group label { display: block; font-size: 11.5px; font-weight: 800; text-transform: uppercase; color: #4b5563; margin-bottom: 5px; }
+    .form-group input { width: 100%; padding: 10px 14px; border: 1px solid #d1d5db; border-radius: 10px; font-size: 13.5px; }
+    .submit-btn { width: 100%; padding: 12px; background: #0f172a; color: #ffffff; border: none; border-radius: 10px; font-weight: 700; font-size: 13px; cursor: pointer; transition: background 0.15s; }
+    .submit-btn:hover { background: #1e293b; }
+
+    /* Footer */
     .site-footer { text-align: center; padding: 40px 0 20px 0; color: #9ca3af; font-size: 13px; }
     .site-footer a { color: #111827; text-decoration: none; font-weight: 700; }
   </style>
@@ -69,83 +81,113 @@
     <header class="site-header">
       <a href="#" class="brand-logo">Run My Brief.</a>
       <nav class="nav-links">
-        <a href="#work">Work</a>
-        <a href="#about">About</a>
-        <a href="mailto:jimmy@runmybrief.com">Contact</a>
+        <a href="#prototypes">Prototypes</a>
+        <a href="#infrastructure">Pricing</a>
+        <a href="#request" class="nav-btn">Request Demo</a>
       </nav>
     </header>
 
     <!-- Main Balanced Layout -->
     <main class="main-grid">
       
-      <!-- Left Column: Hero & Integrated Professional Background -->
+      <!-- Left Column: Strategy, Infrastructure & Pricing -->
       <div class="left-column">
-        <section class="hero-panel" id="about">
-          <div class="hero-avatar">
-            JN
+        <section class="hero-panel">
+          <div class="status-badge">
+            <span class="status-dot"></span> Custom Lead Intake Infrastructure
           </div>
-          <h1 class="hero-title">Hi there, I'm Jimmy, Editorial Systems Lead &amp; Journalist</h1>
+          <h1 class="hero-title">Turn Passive Finance Followers into High-Intent Deals &amp; Buyers.</h1>
           <p class="hero-bio">
-            As an experienced journalist and former editor at Yahoo and Metro, I help creators and brands capture audiences away from social platforms and build independent publishing infrastructure. My work bridges traditional newsroom discipline with modern automated workflows to turn scattered content into high-converting owned media.
+            Linktree lists and generic PDF downloads leak 90% of your audience. We build and maintain lightning-fast, 20-second interactive intake diagnostics for finance, land, and wealth creators—capturing buyer data upfront and routing qualified leads straight to your partners and high-ticket offers.
           </p>
-          <div class="hero-signature">— Jimmy Nsubuga, Run My Brief</div>
+          <div style="font-size: 13px; font-weight: 700; color: #111827;">— Engineered by Jimmy Nsubuga</div>
         </section>
 
-        <section class="creds-container">
-          <h2 class="section-heading">Professional Background</h2>
-          
-          <div class="cred-item">
-            <div class="cred-role">Founder &amp; Editorial Systems Lead</div>
-            <div class="cred-org">NewsNavi</div>
-            <div class="cred-desc">Architected publishing pipelines and automated content distribution frameworks, achieving 900 Google clicks and 84k impressions within 3 months of launch.</div>
+        <!-- Friction Breakdown -->
+        <section class="compare-card">
+          <h2 class="section-heading">Why Link-In-Bio Fails Finance Creators</h2>
+          <div class="friction-row">
+            <div class="friction-item friction-bad">
+              <strong>The Cluttered Link Tree:</strong> 10 identical buttons force analysis paralysis. Audiences bounce without clicking, leaving zero data behind.
+            </div>
+            <div class="friction-item friction-good">
+              <strong>The 20-Second Diagnostic:</strong> Asks 4 friction-free questions, scores their profile instantly, captures their verified email, and hands off primed buyers directly to your course or sponsor.
+            </div>
           </div>
+        </section>
 
-          <div class="cred-item">
-            <div class="cred-role">Online Journalist &amp; Editor</div>
-            <div class="cred-org">Yahoo.co.uk</div>
-            <div class="cred-desc">Reported on major national stories, sports, and live events while optimizing editorial copy for search engines and user engagement across enterprise CMS platforms.</div>
-          </div>
-
-          <div class="cred-item">
-            <div class="cred-role">News Reporter</div>
-            <div class="cred-org">Metro.co.uk</div>
-            <div class="cred-desc">Produced high-impact breaking news and feature pieces under fast-paced daily deadlines, mastering headline optimization and audience retention metrics.</div>
-          </div>
+        <!-- Managed Pricing Retainer -->
+        <section class="pricing-card" id="infrastructure">
+          <span style="font-size: 11px; text-transform: uppercase; font-weight: 800; color: #38bdf8; letter-spacing: 1px;">Fully Managed Infrastructure</span>
+          <div class="pricing-price">$250 <span style="font-size: 15px; font-weight: 500; color: #9ca3af;">/ month</span></div>
+          <p class="pricing-desc">
+            No software setups or tech headaches for creators. We build, host, monitor, and optimise your interactive intake engine on global edge servers.
+          </p>
+          <ul class="pricing-features">
+            <li>Custom 4-step diagnostic built specifically for your niche</li>
+            <li>Edge-hosted on Cloudflare (sub-50ms load times worldwide)</li>
+            <li>Real-time automated sync to Google Sheets &amp; Smartlead / ESP</li>
+            <li>Dynamic routing: direct high-intent traffic to courses &amp; affiliates</li>
+            <li>Ongoing monthly split-testing of hooks and conversion rates</li>
+          </ul>
         </section>
       </div>
 
-      <!-- Right Column: Work Grid with Branded Visual Cards -->
-      <div class="work-grid" id="work">
+      <!-- Right Column: Interactive Prototypes & Intake Form -->
+      <div class="work-grid" id="prototypes">
         
-        <a href="https://www.yahoo.com/author/jimmy-nsubuga/" target="_blank" class="work-card">
-          <div class="work-visual yahoo-bg" aria-hidden="true">
-            yahoo!
+        <!-- Tool 1: Land / Real Estate (Acre Boyzz Blueprint) -->
+        <a href="land-diagnostic.html" target="_blank" class="work-card">
+          <div class="work-visual land-bg">
+            <span class="visual-tag">Real Estate &amp; Land Deals</span>
+            <span class="visual-title">Land Deal &amp; Compound Diagnostic</span>
           </div>
           <div class="work-meta">
-            <h3>Yahoo Editorial &amp; SEO <span>↗</span></h3>
-            <p>Original reporting, breaking news editing, and search optimization driving significant audience reach.</p>
+            <h3>Acre Boyzz Prototype <span>↗</span></h3>
+            <p>Engineered for high-ticket acreage, tax deed flipping, and multi-parcel compounds. Converts raw views into qualified buyer leads.</p>
           </div>
         </a>
 
-        <a href="https://metro.co.uk/author/jimmy-nsubuga-ukmetro/" target="_blank" class="work-card">
-          <div class="work-visual metro-bg" aria-hidden="true">
-            Metro
+        <!-- Tool 2: Net Worth & Financial Runway -->
+        <a href="networth-diagnostic.html" target="_blank" class="work-card">
+          <div class="work-visual wealth-bg">
+            <span class="visual-tag">Wealth &amp; Portfolio Growth</span>
+            <span class="visual-title">Net Worth &amp; Runway Calculator</span>
           </div>
           <div class="work-meta">
-            <h3>Metro Feature Series <span>↗</span></h3>
-            <p>High-urgency breaking news and feature content created under stringent daily newsroom deadlines.</p>
+            <h3>Personal Finance &amp; S&amp;P 500 <span>↗</span></h3>
+            <p>Calculates compound milestone targets and FIRE dates. Routes qualified readers directly into partner brokerage affiliate links.</p>
           </div>
         </a>
 
-        <a href="https://newsnavi.ai/" target="_blank" class="work-card">
-          <div class="work-visual newsnavi-bg" aria-hidden="true">
-            NEWSNAVI
+        <!-- Tool 3: Cashflow & Debt Snowball -->
+        <a href="debt-diagnostic.html" target="_blank" class="work-card">
+          <div class="work-visual debt-bg">
+            <span class="visual-tag">Budgeting &amp; Cashflow</span>
+            <span class="visual-title">Debt Snowball &amp; Cashflow Allocator</span>
           </div>
           <div class="work-meta">
-            <h3>Publishing Systems Case Study <span>↗</span></h3>
-            <p>Automated content pipelines and prompt workflows delivering 84k+ impressions in 3 months.</p>
+            <h3>Budgeting &amp; Debt Acceleration <span>↗</span></h3>
+            <p>Evaluates monthly surplus and repayment velocity. Funnels high-intent participants straight into coaching programs and money tools.</p>
           </div>
         </a>
+
+        <!-- Inbound Prototype Request Box -->
+        <div class="request-card" id="request">
+          <h3 style="font-size: 15px; font-weight: 800; margin-bottom: 4px;">Request a Custom 20-Second Prototype</h3>
+          <p style="font-size: 13px; color: #6b7280; margin-bottom: 14px;">Want to see how an intake engine looks for your specific channel? We build a functioning draft at zero upfront cost.</p>
+          <form onsubmit="event.preventDefault(); alert('Request logged! We will construct a bespoke prototype for your handle.');">
+            <div class="form-group">
+              <label>Instagram / TikTok / YouTube Handle</label>
+              <input type="text" placeholder="@yourhandle" required>
+            </div>
+            <div class="form-group">
+              <label>Direct Contact Email</label>
+              <input type="email" placeholder="you@domain.com" required>
+            </div>
+            <button type="submit" class="submit-btn">Build My Channel Prototype &rarr;</button>
+          </form>
+        </div>
 
       </div>
 
@@ -153,9 +195,8 @@
 
     <!-- Footer -->
     <footer class="site-footer">
-      Run My Brief • B2B publishing systems &amp; editorial partnerships • Get in touch at <a href="mailto:jimmy@runmybrief.com">jimmy@runmybrief.com</a>
+      Run My Brief • Automated Creator Funnels &amp; Lead Systems • Enquiries at <a href="mailto:jimmy@runmybrief.com">jimmy@runmybrief.com</a>
     </footer>
 
   </div>
-</body>
-</html>
+</body></html>
