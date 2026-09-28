@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Cashflow &amp; Debt Prioritisation Diagnostic</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <style>
+    body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+    .font-heading { font-family: 'Bebas Neue', Impact, sans-serif; letter-spacing: 0.05em; }
+    button { touch-action: manipulation; }
+  </style>
+</head>
+<body class="bg-[#100717] text-neutral-100 flex items-center justify-center min-h-screen p-3 sm:p-4 antialiased selection:bg-purple-500 selection:text-white">
+
+  <div class="max-w-md w-full bg-[#1b0d27] border border-purple-950 rounded-3xl p-5 sm:p-7 shadow-2xl relative overflow-hidden flex flex-col justify-between">
+    <div>
+      <!-- HEADER -->
+      <div class="flex items-center space-x-3.5 pb-4 border-b border-purple-900/60 mb-4">
+        <div class="w-12 h-12 rounded-full bg-purple-600 flex items-center justify-center font-bold text-white text-lg flex-shrink-0 shadow-md">
+          CF
+        </div>
+        <div>
+          <div class="text-xs font-bold uppercase tracking-wider text-purple-400">Cashflow &amp; Debt Freedom</div>
+          <div class="text-2xl font-heading text-white uppercase leading-none tracking-wider mt-0.5">
+            Debt Snowball Diagnostic
+          </div>
+          <div class="text-xs text-neutral-400 font-medium mt-0.5">
+            Calculate Payoff Velocity &amp; Monthly Surplus
+          </div>
+        </div>
+      </div>
+
+      <!-- STATUS BANNER -->
+      <div class="bg-purple-950/40 border border-purple-900/50 rounded-2xl p-3 mb-5 flex items-center justify-between gap-2.5">
+        <div class="flex items-center gap-1.5">
+          <span class="w-2 h-2 rounded-full bg-purple-500 animate-pulse flex-shrink-0"></span>
+          <span class="text-[11px] uppercase tracking-widest font-extrabold text-neutral-300">Surplus Calculator Ready</span>
+        </div>
+        <span class="text-[10px] uppercase font-bold tracking-wider text-purple-400 bg-purple-950/80 border border-purple-800/60 px-2 py-0.5 rounded-lg">
+          20 Seconds
+        </span>
+      </div>
+
+      <!-- 4-STEP CONTAINER -->
+      <div id="quizContainer">
+        <div class="flex items-center justify-between text-xs font-semibold text-neutral-400 mb-2">
+          <span id="stepIndicator" class="font-mono">Step 1 of 4</span>
+          <span id="stepCategory" class="text-purple-400 font-extrabold uppercase tracking-wider">Debt Profile</span>
+        </div>
+        <h2 class="text-lg font-bold text-white mb-4 leading-snug" id="questionText"></h2>
+        <div class="space-y-3" id="optionsContainer"></div>
+      </div>
+
+      <!-- LEAD CAPTURE -->
+      <div id="captureGate" class="hidden text-center py-2">
+        <div class="w-14 h-14 rounded-full bg-purple-500/15 border border-purple-500/40 flex items-center justify-center mx-auto mb-3">
+          <span class="text-purple-400 font-black text-xl">✓</span>
+        </div>
+        <h3 class="text-3xl font-heading text-white uppercase tracking-wider mb-1">Payoff Schedule Formulated</h3>
+        <p class="text-sm text-neutral-300 mb-5 leading-relaxed">
+          Enter your details below to unlock your debt payoff acceleration order and custom budget allocation:
+        </p>
+
+        <form onsubmit="handleFormSubmit(event)" class="space-y-4 text-left">
+          <div>
+            <label class="block text-xs uppercase tracking-wider font-extrabold text-neutral-400 mb-1.5">First Name</label>
+            <input type="text" id="leadName" required placeholder="e.g. Jordan" class="w-full px-4 py-3.5 bg-neutral-900 border border-purple-900/60 rounded-xl text-white focus:outline-none focus:border-purple-500 transition">
+          </div>
+          <div>
+            <label class="block text-xs uppercase tracking-wider font-extrabold text-neutral-400 mb-1.5">Email Address</label>
+            <input type="email" id="leadEmail" required placeholder="jordan@example.com" class="w-full px-4 py-3.5 bg-neutral-900 border border-purple-900/60 rounded-xl text-white focus:outline-none focus:border-purple-500 transition">
+          </div>
+          <button type="submit" id="submitBtn" class="w-full mt-2 py-4 bg-purple-600 hover:bg-purple-500 font-black rounded-xl text-white text-xs uppercase tracking-widest shadow-lg shadow-purple-600/30 transition flex items-center justify-center gap-2">
+            <span>Unlock Payoff Action Roadmap &rarr;</span>
+          </button>
+        </form>
+      </div>
+
+      <!-- RESULTS STATE -->
+      <div id="resultState" class="hidden pt-1 text-center">
+        <div class="p-5 bg-purple-950/40 border border-purple-900/60 rounded-2xl mb-4 space-y-2">
+          <span class="text-xs uppercase tracking-widest text-purple-400 font-extrabold">Assigned Action Framework</span>
+          <div class="text-2xl font-heading text-white uppercase tracking-wider" id="profileType"></div>
+          <p class="text-xs sm:text-sm text-neutral-300 leading-relaxed" id="profileDescription"></p>
+        </div>
+
+        <div class="border-t border-purple-900/60 pt-3.5 mb-3 text-left">
+          <div class="text-xs font-black text-neutral-400 uppercase tracking-widest mb-2.5">Recommended Next Step</div>
+          <a id="actionLink" href="#" target="_blank" class="flex items-center justify-between p-4 bg-purple-950/60 hover:bg-purple-900/80 border border-purple-500/50 rounded-xl transition group">
+            <div class="pr-2">
+              <div class="text-sm font-bold text-white group-hover:text-purple-400 transition" id="actionTitle"></div>
+              <div class="text-xs text-neutral-400 mt-0.5" id="actionDesc"></div>
+            </div>
+            <span class="text-xs font-bold text-purple-400 bg-purple-900/80 border border-purple-700/60 px-3.5 py-2 rounded-lg whitespace-nowrap">Access &rarr;</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- BOTTOM PROGRESS BAR -->
+    <div id="bottomNav" class="pt-5 mt-5 border-t border-purple-900/60 flex items-center justify-between">
+      <button id="backBtn" onclick="handleGoBack()" type="button" class="invisible text-sm font-bold text-neutral-400 hover:text-white transition">
+        &larr; Back
+      </button>
+      <div id="progressBar" class="flex gap-1.5">
+        <span class="w-7 h-2 rounded-full bg-purple-500" id="bar-0"></span>
+        <span class="w-7 h-2 rounded-full bg-neutral-800" id="bar-1"></span>
+        <span class="w-7 h-2 rounded-full bg-neutral-800" id="bar-2"></span>
+        <span class="w-7 h-2 rounded-full bg-neutral-800" id="bar-3"></span>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbyu4yxfxCq4BmZu5eOq8zsMp1cBUFKLkjvC5FV3iHQ-BFHsZ97G7bh2JDN3hI7wtZLU5A/exec";
+
+    const quizData = [
+      {
+        category: "Debt Structure",
+        question: "What type of debt balance is currently your highest priority to eliminate?",
+        options: [
+          { text: "High-Interest Credit Cards (19%+ APR)", tag: "snowball", summary: "High APR Credit Cards" },
+          { text: "Student Loans & Car Notes (Sub-8% APR)", tag: "avalanche", summary: "Fixed Low APR Loans" },
+          { text: "Multiple Scattered Balances: Needing quick momentum", tag: "snowball", summary: "Scattered Consumer Debt" },
+          { text: "Zero Consumer Debt: Focus is cashflow budgeting", tag: "cashflow", summary: "Pure Cashflow Optimization" }
+        ]
+      },
+      {
+        category: "Monthly Surplus",
+        question: "After essential living expenses, what is your typical monthly cash surplus?",
+        options: [
+          { text: "Under £200 / $200: Tight margins, need spending leak audit", tag: "cashflow", summary: "Under $200 Surplus" },
+          { text: "£200 to £600: Moderate margin ready for focused acceleration", tag: "snowball", summary: "$200-$600 Surplus" },
+          { text: "£600 to £1,500+: Strong surplus capable of aggressive payoff", tag: "avalanche", summary: "$600-$1,500+ Surplus" },
+          { text: "Irregular: Fluctuating commissions or 1099 revenue", tag: "variable", summary: "Irregular 1099 Cashflow" }
+        ]
+      },
+      {
+        category: "Payoff Methodology",
+        question: "Which mental framework gives you the most momentum?",
+        options: [
+          { text: "Quick Psychological Wins (Smallest balance first: Snowball)", tag: "snowball", summary: "Snowball Momentum" },
+          { text: "Pure Mathematical Efficiency (Highest APR first: Avalanche)", tag: "avalanche", summary: "Mathematical Avalanche" },
+          { text: "Buffer-First: Maintaining a strict £1,000 / $1,000 cash safety reserve", tag: "cashflow", summary: "Cash Buffer First" },
+          { text: "Income Stacking: Generating secondary side-income to attack principal", tag: "variable", summary: "Income Acceleration" }
+        ]
+      },
+      {
+        category: "Core Frustration",
+        question: "Where does your current budget usually experience friction?",
+        options: [
+          { text: "Hidden Subscription & Dining Leaks", tag: "cashflow", summary: "Category Leaks" },
+          { text: "Lack of a clear monthly payoff order", tag: "snowball", summary: "Sequencing Clarity" },
+          { text: "High interest eating up monthly payments", tag: "avalanche", summary: "Interest Drag" },
+          { text: "Burnout from overly restrictive spreadsheet budgeting", tag: "variable", summary: "Budget Burnout" }
+        ]
+      }
+    ];
+
+    const profileRoutes = {
+      "snowball": {
+        title: "Debt Snowball Momentum Strategy",
+        description: "Your priority is knock-out velocity. Knocking out smaller balances sequentially creates immediate cashflow relief and psychological momentum.",
+        actionTitle: "Custom Debt Snowball Dashboard",
+        actionDesc: "Access the automated repayment sequence and eliminate debt drag.",
+        url: "#"
+      },
+      "avalanche": {
+        title: "High-APR Mathematical Avalanche",
+        description: "Your surplus allows you to target high-interest drag directly, saving thousands in compounding interest and cutting payoff time in half.",
+        actionTitle: "Interest Avalanche Optimiser",
+        actionDesc: "Download the dynamic amortization framework to minimize bank interest.",
+        url: "#"
+      },
+      "cashflow": {
+        title: "Zero-Based Cashflow Allocator",
+        description: "Your highest return comes from sealing spending leaks and establishing an automated cash buffer before accelerating debt payments.",
+        actionTitle: "Cashflow Clarity Accelerator",
+        actionDesc: "Audit category spending and lock in a sustainable monthly surplus.",
+        url: "#"
+      },
+      "variable": {
+        title: "Irregular Income Velocity Plan",
+        description: "Designed for variable earners and entrepreneurs to allocate feast months into debt principal while maintaining steady personal baseline reserves.",
+        actionTitle: "Variable Income Budgeting Blueprint",
+        actionDesc: "The complete system for managing debt and reserves with irregular income.",
+        url: "#"
+      }
+    };
+
+    let currentStep = 0;
+    const selectedAnswers = [];
+
+    function updateNavState() {
+      const backBtn = document.getElementById('backBtn');
+      const bottomNav = document.getElementById('bottomNav');
+      if (!document.getElementById('resultState').classList.contains('hidden')) {
+        bottomNav.classList.add('hidden');
+        return;
+      }
+      backBtn.classList.toggle('invisible', currentStep === 0);
+      for (let i = 0; i < 4; i++) {
+        const bar = document.getElementById(`bar-${i}`);
+        if (bar) bar.className = i <= currentStep ? "w-7 h-2 rounded-full bg-purple-500 transition-colors" : "w-7 h-2 rounded-full bg-neutral-800 transition-colors";
+      }
+    }
+
+    function renderQuestion() {
+      updateNavState();
+      const current = quizData[currentStep];
+      document.getElementById('stepIndicator').innerText = `Step ${currentStep + 1} of ${quizData.length}`;
+      document.getElementById('stepCategory').innerText = current.category;
+      document.getElementById('questionText').innerText = current.question;
+      const container = document.getElementById('optionsContainer');
+      container.innerHTML = '';
+      current.options.forEach((opt) => {
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = "w-full text-left p-4 rounded-xl text-sm font-semibold transition active:scale-[0.98] flex items-center justify-between border bg-neutral-900 hover:bg-neutral-800 border-purple-900/60 text-neutral-200";
+        btn.innerHTML = `<span class="pr-3 leading-snug">${opt.text}</span><span class="text-neutral-500 font-bold text-lg flex-shrink-0">&rarr;</span>`;
+        btn.onclick = () => selectOption(opt.tag);
+        container.appendChild(btn);
+      });
+    }
+
+    function selectOption(tag) {
+      selectedAnswers[currentStep] = tag;
+      currentStep++;
+      if (currentStep < quizData.length) {
+        renderQuestion();
+      } else {
+        document.getElementById('quizContainer').classList.add('hidden');
+        document.getElementById('captureGate').classList.remove('hidden');
+        updateNavState();
+      }
+    }
+
+    function handleGoBack() {
+      if (currentStep > 0) {
+        currentStep--;
+        renderQuestion();
+      }
+    }
+
+    function calculateDominantProfile() {
+      const counts = {};
+      selectedAnswers.forEach(t => counts[t] = (counts[t] || 0) + 1);
+      return Object.keys(counts).reduce((a, b) => counts[a] >= counts[b] ? a : b);
+    }
+
+    async function handleFormSubmit(e) {
+      e.preventDefault();
+      const leadName = document.getElementById('leadName').value.trim();
+      const leadEmail = document.getElementById('leadEmail').value.trim();
+      const dominantTag = calculateDominantProfile();
+      const resolved = profileRoutes[dominantTag] || profileRoutes["snowball"];
+
+      const payload = {
+        type: "lead",
+        tool: "Debt Snowball Diagnostic",
+        name: leadName,
+        email: leadEmail,
+        dominantTag: dominantTag,
+        strategy: resolved.title,
+        targetUrl: resolved.url,
+        source: window.location.href
+      };
+
+      if (WEBHOOK_URL) {
+        try {
+          await fetch(WEBHOOK_URL, {
+            method: "POST",
+            mode: "no-cors",
+            headers: { "Content-Type": "text/plain" },
+            body: JSON.stringify(payload)
+          });
+        } catch (err) {
+          console.error("Transmission error:", err);
+        }
+      }
+
+      document.getElementById('profileType').innerText = resolved.title;
+      document.getElementById('profileDescription').innerText = resolved.description;
+      document.getElementById('actionTitle').innerText = resolved.actionTitle;
+      document.getElementById('actionDesc').innerText = resolved.actionDesc;
+      document.getElementById('actionLink').href = resolved.url;
+      document.getElementById('captureGate').classList.add('hidden');
+      document.getElementById('resultState').classList.remove('hidden');
+      updateNavState();
+    }
+
+    renderQuestion();
+  </script>
+</body>
+</html>
