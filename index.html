@@ -285,7 +285,7 @@
 
     </section>
 
-    <!-- INBOUND DEMO REQUEST FORM -->
+   <!-- INBOUND DEMO REQUEST FORM -->
     <section id="request" class="max-w-xl mx-auto glass-card rounded-2xl p-8 space-y-6">
       <div class="text-center space-y-2">
         <h2 class="text-2xl font-bold text-white font-display">Request a Channel Prototype</h2>
@@ -294,21 +294,25 @@
         </p>
       </div>
 
-      <form onsubmit="event.preventDefault(); alert('Request submitted. We will construct a bespoke prototype for your profile.');" class="space-y-4">
+      <form id="prototypeForm" onsubmit="handlePrototypeSubmit(event)" class="space-y-4">
         <div>
           <label class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-1.5">Instagram / TikTok / YouTube Handle</label>
-          <input type="text" placeholder="@yourhandle" required class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-800 text-white placeholder-slate-600 focus:outline-none focus:border-sky-500 text-sm">
+          <input type="text" id="reqHandle" placeholder="@yourhandle" required class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-800 text-white placeholder-slate-600 focus:outline-none focus:border-sky-500 text-sm">
         </div>
 
         <div>
           <label class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-1.5">Contact Email Address</label>
-          <input type="email" placeholder="name@domain.com" required class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-800 text-white placeholder-slate-600 focus:outline-none focus:border-sky-500 text-sm">
+          <input type="email" id="reqEmail" placeholder="name@domain.com" required class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-800 text-white placeholder-slate-600 focus:outline-none focus:border-sky-500 text-sm">
         </div>
 
-        <button type="submit" class="w-full py-3.5 rounded-xl bg-white hover:bg-slate-200 text-black font-extrabold text-sm transition mt-2">
+        <button type="submit" id="reqSubmitBtn" class="w-full py-3.5 rounded-xl bg-white hover:bg-slate-200 text-black font-extrabold text-sm transition mt-2">
           Generate Free Channel Prototype &rarr;
         </button>
       </form>
+
+      <div id="reqSuccessMsg" class="hidden p-4 rounded-xl bg-emerald-950/60 border border-emerald-500/40 text-center text-xs text-emerald-300">
+        ✓ Request received! We will build a live prototype for your handle and dispatch the demo link to your email.
+      </div>
     </section>
 
   </main>
@@ -317,6 +321,44 @@
   <footer class="w-full border-t border-white/5 py-8 mt-24 text-center text-xs text-slate-500">
     Run My Brief • Engineered Lead Infrastructure for Finance &amp; Real Estate Creators • <a href="mailto:jimmy@runmybrief.com" class="text-slate-400 hover:text-white transition">jimmy@runmybrief.com</a>
   </footer>
+
+  <!-- SUBMISSION SCRIPT -->
+  <script>
+    async function handlePrototypeSubmit(e) {
+      e.preventDefault();
+      const btn = document.getElementById('reqSubmitBtn');
+      btn.disabled = true;
+      btn.innerText = "Submitting request...";
+
+      const handle = document.getElementById('reqHandle').value.trim();
+      const email = document.getElementById('reqEmail').value.trim();
+
+      const payload = {
+        type: "prototype_request",
+        handle: handle,
+        email: email,
+        source: window.location.href
+      };
+
+      const WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbyu4yxfxCq4BmZu5eOq8zsMp1cBUFKLkjvC5FV3iHQ-BFHsZ97G7bh2JDN3hI7wtZLU5A/exec";
+
+      try {
+        await fetch(WEBHOOK_URL, {
+          method: "POST",
+          mode: "no-cors",
+          headers: { "Content-Type": "text/plain" },
+          body: JSON.stringify(payload)
+        });
+
+        document.getElementById('prototypeForm').classList.add('hidden');
+        document.getElementById('reqSuccessMsg').classList.remove('hidden');
+      } catch (err) {
+        alert("Submission error. Please email directly at jimmy@runmybrief.com");
+        btn.disabled = false;
+        btn.innerText = "Generate Free Channel Prototype →";
+      }
+    }
+  </script>
 
 </body>
 </html>
