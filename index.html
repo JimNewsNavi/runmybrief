@@ -18,30 +18,38 @@
     .nav-btn { background: #111827; color: #ffffff !important; padding: 8px 16px; border-radius: 10px; font-size: 13px !important; font-weight: 700 !important; }
     .nav-btn:hover { background: #1f2937; }
 
-    /* Main Grid */
+    /* Main Balanced Grid */
     .main-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; align-items: start; }
     @media (max-width: 860px) { .main-grid { grid-template-columns: 1fr; } }
 
-    /* Left Column: Hero & Narrative */
+    /* Left Column */
     .left-column { display: flex; flex-direction: column; gap: 24px; }
     .hero-panel { background: #eef2f6; border-radius: 20px; padding: 36px 32px; border: 1px solid #e2e8f0; }
-    .status-badge { display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; background: #e2e8f0; border-radius: 20px; font-size: 12px; font-weight: 700; color: #0f172a; margin-bottom: 16px; }
-    .status-dot { width: 7px; height: 7px; border-radius: 50%; background: #10b981; }
+    .hero-avatar { width: 60px; height: 60px; border-radius: 50%; overflow: hidden; margin-bottom: 18px; border: 2px solid #ffffff; box-shadow: 0 4px 12px rgba(0,0,0,0.08); background: #111827; display: flex; align-items: center; justify-content: center; color: #ffffff; font-weight: 900; font-size: 18px; letter-spacing: -0.5px; }
     .hero-title { font-size: 30px; font-weight: 800; color: #111827; line-height: 1.2; letter-spacing: -0.8px; margin-bottom: 16px; }
     .hero-bio { font-size: 14.5px; color: #4b5563; line-height: 1.6; margin-bottom: 20px; }
-    
-    /* Comparison Card */
-    .compare-card { background: #ffffff; border: 1px solid #e5e7eb; border-radius: 20px; padding: 28px; }
+    .hero-signature { font-size: 13px; font-weight: 700; color: #111827; }
+
+    /* Credentials Container */
+    .creds-container { background: #ffffff; border: 1px solid #e5e7eb; border-radius: 20px; padding: 28px; }
     .section-heading { font-size: 13px; font-weight: 800; color: #6b7280; margin-bottom: 16px; letter-spacing: 0.5px; text-transform: uppercase; }
-    .friction-row { display: flex; flex-direction: column; gap: 14px; }
-    .friction-item { padding: 12px 14px; border-radius: 12px; font-size: 13.5px; line-height: 1.45; }
+    .cred-item { margin-bottom: 18px; padding-bottom: 18px; border-bottom: 1px solid #f3f4f6; }
+    .cred-item:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+    .cred-role { font-size: 14px; font-weight: 800; color: #111827; margin-bottom: 2px; }
+    .cred-org { font-size: 12px; font-weight: 700; color: #dc2626; margin-bottom: 4px; }
+    .cred-desc { font-size: 13px; color: #4b5563; line-height: 1.5; }
+
+    /* Friction Breakdown */
+    .compare-card { background: #ffffff; border: 1px solid #e5e7eb; border-radius: 20px; padding: 28px; }
+    .friction-row { display: flex; flex-direction: column; gap: 12px; }
+    .friction-item { padding: 12px 14px; border-radius: 12px; font-size: 13px; line-height: 1.45; }
     .friction-bad { background: #fef2f2; border: 1px solid #fee2e2; color: #991b1b; }
     .friction-good { background: #f0fdf4; border: 1px solid #dcfce7; color: #166534; }
 
     /* Pricing Panel */
     .pricing-card { background: #111827; color: #ffffff; border-radius: 20px; padding: 28px; border: 1px solid #1f2937; }
     .pricing-price { font-size: 32px; font-weight: 900; margin: 8px 0; color: #38bdf8; letter-spacing: -0.5px; }
-    .pricing-desc { font-size: 13px; color: #9ca3af; line-height: 1.5; margin-bottom: 18px; }
+    .pricing-desc { font-size: 13px; color: #9ca3af; line-height: 1.5; margin-bottom: 16px; }
     .pricing-features { list-style: none; display: flex; flex-direction: column; gap: 8px; font-size: 13px; color: #e5e7eb; }
     .pricing-features li::before { content: "✓ "; color: #38bdf8; font-weight: 800; }
 
@@ -60,6 +68,16 @@
 
     .work-meta h3 { font-size: 15px; font-weight: 800; color: #111827; display: flex; justify-content: space-between; align-items: center; }
     .work-meta p { font-size: 13px; color: #6b7280; line-height: 1.45; margin-top: 4px; }
+
+    /* Editorial Track Record Badges */
+    .editorial-badges { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 4px; }
+    .badge-card { background: #ffffff; border: 1px solid #e5e7eb; border-radius: 14px; padding: 14px; text-decoration: none; display: flex; align-items: center; gap: 12px; transition: border-color 0.15s; }
+    .badge-card:hover { border-color: #94a3b8; }
+    .badge-icon { width: 42px; height: 42px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 900; color: #ffffff; font-size: 14px; flex-shrink: 0; }
+    .badge-icon.yahoo { background: #6001d2; font-size: 12px; }
+    .badge-icon.metro { background: #e31837; font-family: serif; font-size: 15px; }
+    .badge-text { font-size: 12.5px; font-weight: 700; color: #111827; line-height: 1.3; }
+    .badge-sub { font-size: 11px; color: #6b7280; font-weight: 500; }
 
     /* Prototype Request Form Card */
     .request-card { background: #ffffff; border: 1px solid #e5e7eb; border-radius: 20px; padding: 24px; margin-top: 6px; }
@@ -82,6 +100,7 @@
       <a href="#" class="brand-logo">Run My Brief.</a>
       <nav class="nav-links">
         <a href="#prototypes">Prototypes</a>
+        <a href="#track-record">Background</a>
         <a href="#infrastructure">Pricing</a>
         <a href="#request" class="nav-btn">Request Demo</a>
       </nav>
@@ -90,17 +109,38 @@
     <!-- Main Balanced Layout -->
     <main class="main-grid">
       
-      <!-- Left Column: Strategy, Infrastructure & Pricing -->
+      <!-- Left Column: Strategy, Background & Retainer -->
       <div class="left-column">
         <section class="hero-panel">
-          <div class="status-badge">
-            <span class="status-dot"></span> Custom Lead Intake Infrastructure
-          </div>
-          <h1 class="hero-title">Turn Passive Finance Followers into High-Intent Deals &amp; Buyers.</h1>
+          <div class="hero-avatar">JN</div>
+          <h1 class="hero-title">Automated Lead Infrastructure for Top Finance Creators</h1>
           <p class="hero-bio">
-            Linktree lists and generic PDF downloads leak 90% of your audience. We build and maintain lightning-fast, 20-second interactive intake diagnostics for finance, land, and wealth creators—capturing buyer data upfront and routing qualified leads straight to your partners and high-ticket offers.
+            Bridging enterprise newsroom discipline from Yahoo and Metro with high-converting intake funnels. We replace cluttered link-in-bio directories with 20-second interactive diagnostics that capture buyer data upfront and route qualified traffic directly to your highest-value offers.
           </p>
-          <div style="font-size: 13px; font-weight: 700; color: #111827;">— Engineered by Jimmy Nsubuga</div>
+          <div class="hero-signature">— Jimmy Nsubuga, Editorial Systems Lead &amp; Founder</div>
+        </section>
+
+        <!-- Proven Editorial Background -->
+        <section class="creds-container" id="track-record">
+          <h2 class="section-heading">Editorial Track Record &amp; Systems</h2>
+          
+          <div class="cred-item">
+            <div class="cred-role">Founder &amp; Systems Architect</div>
+            <div class="cred-org">NewsNavi</div>
+            <div class="cred-desc">Architected automated intake and publishing pipelines, generating 84k+ Google impressions and rapid organic reach within 3 months of launch.</div>
+          </div>
+
+          <div class="cred-item">
+            <div class="cred-role">Online Journalist &amp; Editor</div>
+            <div class="cred-org">Yahoo UK</div>
+            <div class="cred-desc">Delivered high-volume breaking editorial, homepage curation, and search optimization driving millions of monthly reader engagements.</div>
+          </div>
+
+          <div class="cred-item">
+            <div class="cred-role">News Reporter</div>
+            <div class="cred-org">Metro.co.uk</div>
+            <div class="cred-desc">Covered fast-paced national breaking stories under stringent newsroom deadlines, mastering headline hooks and audience retention metrics.</div>
+          </div>
         </section>
 
         <!-- Friction Breakdown -->
@@ -108,7 +148,7 @@
           <h2 class="section-heading">Why Link-In-Bio Fails Finance Creators</h2>
           <div class="friction-row">
             <div class="friction-item friction-bad">
-              <strong>The Cluttered Link Tree:</strong> 10 identical buttons force analysis paralysis. Audiences bounce without clicking, leaving zero data behind.
+              <strong>The Cluttered Link Tree:</strong> 10 identical buttons force analysis paralysis. Audiences bounce without clicking, leaving zero buyer data behind.
             </div>
             <div class="friction-item friction-good">
               <strong>The 20-Second Diagnostic:</strong> Asks 4 friction-free questions, scores their profile instantly, captures their verified email, and hands off primed buyers directly to your course or sponsor.
@@ -116,9 +156,9 @@
           </div>
         </section>
 
-        <!-- Managed Pricing Retainer -->
+        <!-- Managed Retainer -->
         <section class="pricing-card" id="infrastructure">
-          <span style="font-size: 11px; text-transform: uppercase; font-weight: 800; color: #38bdf8; letter-spacing: 1px;">Fully Managed Infrastructure</span>
+          <span style="font-size: 11px; text-transform: uppercase; font-weight: 800; color: #38bdf8; letter-spacing: 1px;">Fully Managed Retainer</span>
           <div class="pricing-price">$250 <span style="font-size: 15px; font-weight: 500; color: #9ca3af;">/ month</span></div>
           <p class="pricing-desc">
             No software setups or tech headaches for creators. We build, host, monitor, and optimise your interactive intake engine on global edge servers.
@@ -133,22 +173,22 @@
         </section>
       </div>
 
-      <!-- Right Column: Interactive Prototypes & Intake Form -->
+      <!-- Right Column: Interactive Prototypes, Press Links & Request Box -->
       <div class="work-grid" id="prototypes">
         
-        <!-- Tool 1: Land / Real Estate (Acre Boyzz Blueprint) -->
+        <!-- Live Tool 1: Land / Real Estate (Acre Boyzz) -->
         <a href="land-diagnostic.html" target="_blank" class="work-card">
           <div class="work-visual land-bg">
-            <span class="visual-tag">Real Estate &amp; Land Deals</span>
+            <span class="visual-tag">High-Ticket Land Deals</span>
             <span class="visual-title">Land Deal &amp; Compound Diagnostic</span>
           </div>
           <div class="work-meta">
-            <h3>Acre Boyzz Prototype <span>↗</span></h3>
+            <h3>Acre Boyzz Blueprint <span>↗</span></h3>
             <p>Engineered for high-ticket acreage, tax deed flipping, and multi-parcel compounds. Converts raw views into qualified buyer leads.</p>
           </div>
         </a>
 
-        <!-- Tool 2: Net Worth & Financial Runway -->
+        <!-- Live Tool 2: Net Worth & Financial Runway -->
         <a href="networth-diagnostic.html" target="_blank" class="work-card">
           <div class="work-visual wealth-bg">
             <span class="visual-tag">Wealth &amp; Portfolio Growth</span>
@@ -160,7 +200,7 @@
           </div>
         </a>
 
-        <!-- Tool 3: Cashflow & Debt Snowball -->
+        <!-- Live Tool 3: Cashflow & Debt Snowball -->
         <a href="debt-diagnostic.html" target="_blank" class="work-card">
           <div class="work-visual debt-bg">
             <span class="visual-tag">Budgeting &amp; Cashflow</span>
@@ -171,6 +211,24 @@
             <p>Evaluates monthly surplus and repayment velocity. Funnels high-intent participants straight into coaching programs and money tools.</p>
           </div>
         </a>
+
+        <!-- Editorial Verification Links -->
+        <div class="editorial-badges">
+          <a href="https://www.yahoo.com/author/jimmy-nsubuga/" target="_blank" class="badge-card">
+            <div class="badge-icon yahoo">Y!</div>
+            <div>
+              <div class="badge-text">Yahoo Author</div>
+              <div class="badge-sub">View Byline Archive ↗</div>
+            </div>
+          </a>
+          <a href="https://metro.co.uk/author/jimmy-nsubuga-ukmetro/" target="_blank" class="badge-card">
+            <div class="badge-icon metro">M</div>
+            <div>
+              <div class="badge-text">Metro Reporter</div>
+              <div class="badge-sub">View Byline Archive ↗</div>
+            </div>
+          </a>
+        </div>
 
         <!-- Inbound Prototype Request Box -->
         <div class="request-card" id="request">
@@ -195,7 +253,7 @@
 
     <!-- Footer -->
     <footer class="site-footer">
-      Run My Brief • Automated Creator Funnels &amp; Lead Systems • Enquiries at <a href="mailto:jimmy@runmybrief.com">jimmy@runmybrief.com</a>
+      Run My Brief • B2B Creator Funnels &amp; Lead Systems • Enquiries at <a href="mailto:jimmy@runmybrief.com">jimmy@runmybrief.com</a>
     </footer>
 
   </div>
