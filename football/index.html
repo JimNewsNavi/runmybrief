@@ -1,0 +1,455 @@
+<!DOCTYPE html><html lang="en-GB"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Run My Brief • Automated Matchday Lead Engines for Football Creators</title>
+
+  <!-- Modern Geometric Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Space Grotesk"', 'sans-serif'],
+          },
+          colors: {
+            obsidian: '#07090e',
+            surface: '#0e121b',
+            borderSubtle: 'rgba(255, 255, 255, 0.08)',
+            accentEmerald: '#10b981',
+            accentRed: '#ef4444'
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #07090e;
+      color: #f1f5f9;
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(16, 185, 129, 0.08) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(239, 68, 68, 0.05) 0px, transparent 50%);
+      background-attachment: fixed;
+    }
+    .glass-card {
+      background: rgba(14, 18, 27, 0.75);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+    }
+    .glass-card:hover {
+      border-color: rgba(255, 255, 255, 0.16);
+    }
+    .glow-effect {
+      box-shadow: 0 0 50px -12px rgba(16, 185, 129, 0.15);
+    }
+    .glow-red {
+      box-shadow: 0 0 50px -12px rgba(239, 68, 68, 0.15);
+    }
+  </style>
+</head>
+<body class="min-h-screen antialiased selection:bg-emerald-500 selection:text-black">
+
+  <!-- NAVIGATION -->
+  <header class="w-full max-w-6xl mx-auto px-6 py-6 flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      <div class="w-9 h-9 rounded-lg bg-gradient-to-br from-emerald-400 to-teal-700 flex items-center justify-center font-display font-bold text-white text-base shadow-lg shadow-emerald-500/20">
+        R
+      </div>
+      <span class="font-display font-bold tracking-tight text-white text-xl">Run My Brief<span class="text-emerald-400">/football</span></span>
+    </div>
+    
+    <nav class="hidden md:flex items-center gap-8 text-base font-medium text-slate-300">
+      <a href="#demo" class="hover:text-white transition">Product Demo</a>
+      <a href="#mechanisms" class="hover:text-white transition">Lead Engines</a>
+      <a href="#pedigree" class="hover:text-white transition">Pedigree</a>
+      <a href="#pricing" class="hover:text-white transition">Plans</a>
+      <a href="#request" class="px-5 py-2.5 rounded-xl bg-white text-black font-bold hover:bg-slate-200 transition duration-200 text-sm">Request Matchday Build</a>
+    </nav>
+  </header>
+
+  <!-- MAIN CONTENT CONTAINER -->
+  <main class="w-full max-w-6xl mx-auto px-6 pt-4 pb-16 space-y-20">
+
+    <!-- HERO SECTION -->
+    <section class="text-center max-w-3xl mx-auto space-y-6">
+      
+      <!-- PILL TAG -->
+      <div>
+        <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-slate-900 border border-slate-800 text-sm font-semibold text-slate-200">
+          <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+          Audience Infrastructure for Live Football Creators &amp; Watchalongs
+        </div>
+      </div>
+
+      <!-- MAIN HEADLINE -->
+      <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-white leading-[1.14]">
+        Turn live stream hype into <span class="bg-gradient-to-r from-emerald-400 via-teal-200 to-sky-400 bg-clip-text text-transparent">owned subscribers</span>.
+      </h1>
+
+      <!-- SUB-HEADLINE -->
+      <p class="text-lg sm:text-xl text-slate-300 leading-relaxed font-normal max-w-2xl mx-auto">
+        When the final whistle blows, thousands of fans debate in your chat—and disappear the second you end stream. Turn that post-match traffic into an owned subscriber list with automated matchday ballots and instant on-screen fan sentiment graphics.
+      </p>
+
+      <!-- UNIFIED PRIMARY HERO CTA -->
+      <div class="pt-2 flex flex-col items-center justify-center gap-3">
+        <a href="#request" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-white text-black font-extrabold text-base hover:bg-slate-200 transition shadow-lg shadow-white/5">
+          Request Free Prototype &rarr;
+        </a>
+        <p class="text-sm text-slate-400 font-medium">Free custom matchday ballot configured for your channel • Zero commitment</p>
+      </div>
+
+      <!-- AUTHORITY & PRESS BAR -->
+      <div class="pt-8 border-t border-white/5 flex flex-col items-center gap-3.5">
+        <span class="text-sm font-semibold uppercase tracking-wider text-slate-400">Editorial &amp; Sports Media Discipline</span>
+        <div class="flex items-center justify-center gap-8 opacity-75 grayscale hover:grayscale-0 transition duration-300">
+          <div class="text-xl font-black tracking-tighter text-slate-200">YAHOO! SPORT</div>
+          <div class="text-xl font-serif font-bold text-slate-200 tracking-wider">Metro Sport</div>
+          <div class="text-base font-display font-bold text-slate-200 tracking-widest uppercase">Fan Terminal</div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- LIVE DEMO EMBED SECTION -->
+    <section id="demo" class="max-w-4xl mx-auto space-y-8">
+      <div class="text-center space-y-3">
+        <span class="text-sm font-bold text-emerald-400 uppercase tracking-widest">Interactive Video Walkthrough</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-white">Watch The Matchday Ballot in Action</h2>
+        <p class="text-base text-slate-300 max-w-xl mx-auto">
+          See how raw post-match emotion from live watchalongs is seamlessly routed into an interactive ratings card that locks in verified emails.
+        </p>
+      </div>
+
+      <!-- 9:16 VERTICAL VIDEO PLAYER CONTAINER -->
+      <div class="flex justify-center">
+        <div class="relative w-full max-w-[340px] aspect-[9/16] rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-black">
+          <iframe 
+            src="https://www.youtube.com/embed/D-3-Z3FL4bQ?enablejsapi=1&origin=https://runmybrief.com" 
+            title="Football Matchday Ballot Walkthrough" 
+            class="absolute top-0 left-0 w-full h-full border-0" 
+            referrerpolicy="strict-origin-when-cross-origin"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+      <p class="text-center text-sm text-slate-400 font-mono">Pinned chat link &rarr; Mobile ballot vote &rarr; Email captured &rarr; Live stream consensus graphic</p>
+    </section>
+
+    <!-- MECHANISMS & RETENTION ENGINES -->
+    <section id="mechanisms" class="space-y-8">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+        <div>
+          <span class="text-sm font-bold text-emerald-400 uppercase tracking-widest">Year-Round Lead Architecture</span>
+          <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-white mt-1">Beyond The 90 Minutes</h2>
+        </div>
+        <p class="text-base text-slate-300 max-w-md">
+          Football channels run on distinct weekly cycles. The dynamic modules adapt to the fixture calendar so lead capture operates continuously.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- CARD 1: MATCHDAY BALLOT -->
+        <div class="glass-card rounded-2xl p-6 sm:p-7 flex flex-col justify-between group transition duration-300 hover:-translate-y-1 glow-effect">
+          <div>
+            <div class="h-32 rounded-xl bg-gradient-to-br from-emerald-950 via-slate-900 to-black p-4 flex flex-col justify-between border border-emerald-500/20 mb-5 relative overflow-hidden">
+              <span class="text-xs font-bold uppercase tracking-wider text-emerald-400 bg-emerald-950/80 px-2.5 py-1 rounded w-max border border-emerald-800/60">Full-Time Hook</span>
+              <div>
+                <div class="text-xl font-display font-bold text-white tracking-wide">Matchday Ballot</div>
+                <div class="text-sm text-slate-300">Manager &amp; Player Consensus</div>
+              </div>
+            </div>
+            <h3 class="text-xl font-bold text-white flex items-center justify-between">
+              Post-Match Ratings
+            </h3>
+            <p class="text-base text-slate-300 mt-3 leading-relaxed">
+              Deploys the moment the referee whistles. Captures raw fan feedback. Fans vote on the manager and key performers to reveal the live chat consensus.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-white/5 flex items-center justify-between text-base text-slate-400">
+            <span>Timing: <strong class="text-slate-200 font-medium">Post-Match Debrief</strong></span>
+            <span class="text-emerald-400 font-bold">High Intent</span>
+          </div>
+        </div>
+
+        <!-- CARD 2: PREDICT THE XI -->
+        <div class="glass-card rounded-2xl p-6 sm:p-7 flex flex-col justify-between group transition duration-300 hover:-translate-y-1">
+          <div>
+            <div class="h-32 rounded-xl bg-gradient-to-br from-sky-950 via-slate-900 to-black p-4 flex flex-col justify-between border border-sky-500/20 mb-5 relative overflow-hidden">
+              <span class="text-xs font-bold uppercase tracking-wider text-sky-400 bg-sky-950/80 px-2.5 py-1 rounded w-max border border-sky-800/60">Mid-Week Build-Up</span>
+              <div>
+                <div class="text-xl font-display font-bold text-white tracking-wide">Starting XI Predictor</div>
+                <div class="text-sm text-slate-300">Tactical Formation Builder</div>
+              </div>
+            </div>
+            <h3 class="text-xl font-bold text-white flex items-center justify-between">
+              Lineup Predictor
+            </h3>
+            <p class="text-base text-slate-300 mt-3 leading-relaxed">
+              Activated 48 hours before kick-off. Fans pick their tactical XI and score predictions. Captures email entries before team news breaks on stream.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-white/5 flex items-center justify-between text-base text-slate-400">
+            <span>Timing: <strong class="text-slate-200 font-medium">Pre-Match Previews</strong></span>
+            <span class="text-sky-400 font-bold">Tactical Fans</span>
+          </div>
+        </div>
+
+        <!-- CARD 3: KEEP, BENCH, SELL -->
+        <div class="glass-card rounded-2xl p-6 sm:p-7 flex flex-col justify-between group transition duration-300 hover:-translate-y-1">
+          <div>
+            <div class="h-32 rounded-xl bg-gradient-to-br from-red-950 via-slate-900 to-black p-4 flex flex-col justify-between border border-red-500/20 mb-5 relative overflow-hidden">
+              <span class="text-xs font-bold uppercase tracking-wider text-red-400 bg-red-950/80 px-2.5 py-1 rounded w-max border border-red-800/60">Windows &amp; Breaks</span>
+              <div>
+                <div class="text-xl font-display font-bold text-white tracking-wide">Keep, Bench, Sell</div>
+                <div class="text-sm text-slate-300">Transfer Squad Audit</div>
+              </div>
+            </div>
+            <h3 class="text-xl font-bold text-white flex items-center justify-between">
+              Squad Overhaul Engine
+            </h3>
+            <p class="text-base text-slate-300 mt-3 leading-relaxed">
+              Keeps subscriber growth active during international breaks and transfer windows. Viewers sort squad personnel and receive the aggregate community tier list by email.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-white/5 flex items-center justify-between text-base text-slate-400">
+            <span>Timing: <strong class="text-slate-200 font-medium">Transfer Windows</strong></span>
+            <span class="text-red-400 font-bold">High Volume</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- EDITORIAL & OPERATIONAL PEDIGREE -->
+    <section id="pedigree" class="glass-card rounded-2xl p-8 sm:p-10 space-y-6">
+      <div class="max-w-2xl">
+        <span class="text-sm font-bold text-emerald-400 uppercase tracking-widest">Turnkey Production</span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white mt-1">Zero Overhead For Production Teams</h2>
+        <p class="text-base text-slate-300 leading-relaxed mt-2">
+          Focus on broadcasting and analysis without manual spreadsheet data entry or code adjustments. Designed by former UK sports journalists and digital media editors who understand live matchday pacing.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5 pt-2">
+        <div class="p-6 rounded-xl bg-slate-900/60 border border-white/5 space-y-2.5">
+          <div class="w-11 h-11 rounded-lg bg-emerald-600/20 text-emerald-400 font-black text-base flex items-center justify-center">01</div>
+          <div class="text-base font-bold text-white">Instant OBS Graphics</div>
+          <div class="text-sm text-slate-300 leading-relaxed">Consensus scores populate into clean browser sources ready to pull directly onto the stream overlay.</div>
+        </div>
+
+        <div class="p-6 rounded-xl bg-slate-900/60 border border-white/5 space-y-2.5">
+          <div class="w-11 h-11 rounded-lg bg-teal-600/20 text-teal-400 font-black text-base flex items-center justify-center">02</div>
+          <div class="text-base font-bold text-white">Automated Monday Debrief</div>
+          <div class="text-sm text-slate-300 leading-relaxed">Voting data compiles automatically into a Monday newsletter digest complete with sponsor placements and key stream clips.</div>
+        </div>
+
+        <div class="p-6 rounded-xl bg-slate-900/60 border border-white/5 space-y-2.5">
+          <div class="w-11 h-11 rounded-lg bg-sky-600/20 text-sky-400 font-black text-base flex items-center justify-center">03</div>
+          <div class="text-base font-bold text-white">Sub-50ms Cloudflare Edge</div>
+          <div class="text-sm text-slate-300 leading-relaxed">Engineered to absorb concurrent traffic spikes when thousands of live viewers tap a pinned stream link simultaneously.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING TIERS -->
+    <section id="pricing" class="space-y-8">
+      <div class="text-center max-w-2xl mx-auto space-y-3">
+        <span class="text-sm font-bold text-emerald-400 uppercase tracking-widest">Predictable Infrastructure</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-white">Simple Plans For Every Matchday</h2>
+        <p class="text-base text-slate-300 leading-relaxed">
+          Zero setup fees. Zero maintenance. Cancel or pause anytime with one click.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
+        
+        <!-- TIER 1: CREATOR -->
+        <div class="glass-card rounded-2xl p-6 sm:p-7 flex flex-col justify-between border border-white/5">
+          <div class="space-y-4">
+            <div>
+              <span class="text-sm font-bold uppercase tracking-wider text-slate-300">Matchday Core</span>
+              <div class="flex items-baseline gap-1 mt-2">
+                <span class="text-4xl font-extrabold text-white font-display">£120</span>
+                <span class="text-sm text-slate-400">/mo</span>
+              </div>
+              <p class="text-sm text-slate-300 mt-2 leading-relaxed">Essential post-match ballot for independent creators turning watchalongs into email lists.</p>
+            </div>
+
+            <ul class="space-y-3 text-sm text-slate-200 pt-3 border-t border-white/5">
+              <li class="flex items-center gap-2.5"><span class="text-emerald-400 font-bold">✓</span> Automated Matchday Ballot</li>
+              <li class="flex items-center gap-2.5"><span class="text-emerald-400 font-bold">✓</span> Real-time consensus data sync</li>
+              <li class="flex items-center gap-2.5"><span class="text-emerald-400 font-bold">✓</span> Cloudflare Edge high-capacity hosting</li>
+              <li class="flex items-center gap-2.5"><span class="text-emerald-400 font-bold">✓</span> Direct CSV / Google Sheets export</li>
+            </ul>
+          </div>
+          <div class="pt-6">
+            <a href="#request" class="w-full block text-center py-3.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-bold text-sm transition">
+              Request Matchday Build
+            </a>
+          </div>
+        </div>
+
+        <!-- TIER 2: BROADCAST (POPULAR) -->
+        <div class="glass-card rounded-2xl p-6 sm:p-7 flex flex-col justify-between border-2 border-emerald-400/80 relative glow-effect bg-gradient-to-b from-emerald-950/20 via-surface to-surface">
+          <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-emerald-400 text-black text-xs font-black uppercase tracking-wider px-3.5 py-1 rounded-full shadow-md">
+            Most Popular
+          </div>
+          <div class="space-y-4">
+            <div>
+              <span class="text-sm font-bold uppercase tracking-wider text-emerald-400">Broadcast Studio</span>
+              <div class="flex items-baseline gap-1 mt-2">
+                <span class="text-4xl font-extrabold text-white font-display">£290</span>
+                <span class="text-sm text-slate-400">/mo</span>
+              </div>
+              <p class="text-sm text-slate-200 mt-2 leading-relaxed">Full lead and production engine with live OBS overlay graphics and weekly email dispatch.</p>
+            </div>
+
+            <ul class="space-y-3 text-sm text-slate-100 pt-3 border-t border-white/10">
+              <li class="flex items-center gap-2.5"><span class="text-emerald-400 font-bold">✓</span> <strong>Everything in Matchday Core</strong></li>
+              <li class="flex items-center gap-2.5"><span class="text-emerald-400 font-bold">✓</span> Live OBS stream graphics feed</li>
+              <li class="flex items-center gap-2.5"><span class="text-emerald-400 font-bold">✓</span> Pre-match "Starting XI" &amp; transfer modules</li>
+              <li class="flex items-center gap-2.5"><span class="text-emerald-400 font-bold">✓</span> Automated Monday morning newsletter debrief</li>
+              <li class="flex items-center gap-2.5"><span class="text-emerald-400 font-bold">✓</span> Sponsor &amp; affiliate link click tracking</li>
+            </ul>
+          </div>
+          <div class="pt-6">
+            <a href="#request" class="w-full block text-center py-4 rounded-xl bg-white hover:bg-slate-200 text-black font-extrabold text-sm transition shadow-lg">
+              Request Matchday Build
+            </a>
+          </div>
+        </div>
+
+        <!-- TIER 3: NETWORK -->
+        <div class="glass-card rounded-2xl p-6 sm:p-7 flex flex-col justify-between border border-white/5">
+          <div class="space-y-4">
+            <div>
+              <span class="text-sm font-bold uppercase tracking-wider text-slate-300">Creator Network</span>
+              <div class="flex items-baseline gap-1 mt-2">
+                <span class="text-4xl font-extrabold text-white font-display">£550</span>
+                <span class="text-sm text-slate-400">/mo</span>
+              </div>
+              <p class="text-sm text-slate-300 mt-2 leading-relaxed">Multi-channel management for talent agencies and creator groups covering multiple clubs.</p>
+            </div>
+
+            <ul class="space-y-3 text-sm text-slate-200 pt-3 border-t border-white/5">
+              <li class="flex items-center gap-2.5"><span class="text-emerald-400 font-bold">✓</span> Up to 4 dedicated club terminals</li>
+              <li class="flex items-center gap-2.5"><span class="text-emerald-400 font-bold">✓</span> Custom domains &amp; talent subdomains</li>
+              <li class="flex items-center gap-2.5"><span class="text-emerald-400 font-bold">✓</span> Multi-show editorial coordination</li>
+              <li class="flex items-center gap-2.5"><span class="text-emerald-400 font-bold">✓</span> Dedicated WhatsApp / Slack matchday support</li>
+            </ul>
+          </div>
+          <div class="pt-6">
+            <a href="#request" class="w-full block text-center py-3.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-bold text-sm transition">
+              Request Matchday Build
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- RISK REVERSAL FOOTNOTE -->
+      <div class="p-4 rounded-xl bg-slate-900/60 border border-white/5 text-center text-sm text-slate-300 max-w-xl mx-auto flex items-center justify-center gap-5 flex-wrap">
+        <span class="flex items-center gap-2"><span class="text-emerald-400">✓</span> Zero Setup Fees</span>
+        <span class="flex items-center gap-2"><span class="text-emerald-400">✓</span> Cancel Anytime</span>
+        <span class="flex items-center gap-2"><span class="text-emerald-400">✓</span> Free Channel Prototype First</span>
+      </div>
+    </section>
+
+    <!-- INBOUND DEMO REQUEST FORM -->
+    <section id="request" class="max-w-xl mx-auto glass-card rounded-2xl p-8 sm:p-10 space-y-6">
+      <div class="text-center space-y-2">
+        <span class="text-sm font-bold text-emerald-400 uppercase tracking-widest">Risk-Free Channel Test</span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white font-display">Get Your Free Matchday Prototype</h2>
+        <p class="text-sm sm:text-base text-slate-300 leading-relaxed">
+          Provide your channel details and upcoming fixture. We will build a functioning matchday ballot and OBS graphic prototype for your channel at zero cost.
+        </p>
+      </div>
+
+      <form id="prototypeForm" onsubmit="handlePrototypeSubmit(event)" class="space-y-5">
+        <div>
+          <label class="block text-sm font-bold uppercase tracking-wider text-slate-300 mb-2">Channel Name / YouTube Handle</label>
+          <input type="text" id="reqHandle" placeholder="e.g. @UnitedStand or @StretfordPaddock" required class="w-full px-4 py-3.5 rounded-xl bg-slate-900 border border-slate-800 text-white placeholder-slate-500 focus:outline-none focus:border-emerald-500 text-base">
+        </div>
+
+        <div>
+          <label class="block text-sm font-bold uppercase tracking-wider text-slate-300 mb-2">Club Supported / Primary Coverage</label>
+          <input type="text" id="reqClub" placeholder="e.g. Manchester United, Arsenal, Liverpool" required class="w-full px-4 py-3.5 rounded-xl bg-slate-900 border border-slate-800 text-white placeholder-slate-500 focus:outline-none focus:border-emerald-500 text-base">
+        </div>
+
+        <div>
+          <label class="block text-sm font-bold uppercase tracking-wider text-slate-300 mb-2">Contact Email Address</label>
+          <input type="email" id="reqEmail" placeholder="name@domain.com" required class="w-full px-4 py-3.5 rounded-xl bg-slate-900 border border-slate-800 text-white placeholder-slate-500 focus:outline-none focus:border-emerald-500 text-base">
+        </div>
+
+        <button type="submit" id="reqSubmitBtn" class="w-full py-4 rounded-xl bg-white hover:bg-slate-200 text-black font-extrabold text-base transition mt-2">
+          Request Free Prototype &rarr;
+        </button>
+      </form>
+
+      <div id="reqSuccessMsg" class="hidden p-5 rounded-xl bg-emerald-950/60 border border-emerald-500/40 text-center text-sm text-emerald-300">
+        ✓ Request logged! We will construct a bespoke matchday prototype for your channel and dispatch the preview link to your inbox.
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="w-full border-t border-white/5 py-8 text-center text-sm text-slate-400">
+    Run My Brief • Engineered Lead Infrastructure for Live Football Creators &amp; Media Networks • <a href="mailto:jimmy@runmybrief.com" class="text-slate-200 hover:text-white transition font-medium">jimmy@runmybrief.com</a>
+  </footer>
+
+  <!-- LIVE WEBHOOK SUBMISSION SCRIPT -->
+  <script>
+    async function handlePrototypeSubmit(e) {
+      e.preventDefault();
+      const btn = document.getElementById('reqSubmitBtn');
+      btn.disabled = true;
+      btn.innerText = "Submitting request...";
+
+      const handle = document.getElementById('reqHandle').value.trim();
+      const club = document.getElementById('reqClub').value.trim();
+      const email = document.getElementById('reqEmail').value.trim();
+
+      const payload = {
+        type: "football_prototype_request",
+        handle: handle,
+        club: club,
+        email: email,
+        source: window.location.href
+      };
+
+      const WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbyu4yxfxCq4BmZu5eOq8zsMp1cBUFKLkjvC5FV3iHQ-BFHsZ97G7bh2JDN3hI7wtZLU5A/exec";
+
+      try {
+        await fetch(WEBHOOK_URL, {
+          method: "POST",
+          mode: "no-cors",
+          headers: { "Content-Type": "text/plain" },
+          body: JSON.stringify(payload)
+        });
+
+        document.getElementById('prototypeForm').classList.add('hidden');
+        document.getElementById('reqSuccessMsg').classList.remove('hidden');
+      } catch (err) {
+        alert("Submission error. Please email directly at jimmy@runmybrief.com");
+        btn.disabled = false;
+        btn.innerText = "Request Free Prototype →";
+      }
+    }
+  </script>
+
+</body></html>
