@@ -60,12 +60,12 @@
 <body class="min-h-screen antialiased selection:bg-emerald-500 selection:text-black">
 
   <!-- NAVIGATION -->
-  <header class="w-full max-w-6xl mx-auto px-6 py-5 flex items-center justify-between">
+  <header class="w-full max-w-6xl mx-auto px-5 py-4 sm:py-5 flex items-center justify-between">
     <div class="flex items-center gap-3">
-      <div class="w-9 h-9 rounded-lg bg-gradient-to-br from-emerald-400 to-teal-700 flex items-center justify-center font-display font-bold text-white text-base shadow-lg shadow-emerald-500/20">
+      <div class="w-8 h-8 sm:w-9 sm:h-9 rounded-lg bg-gradient-to-br from-emerald-400 to-teal-700 flex items-center justify-center font-display font-bold text-white text-base shadow-lg shadow-emerald-500/20">
         R
       </div>
-      <span class="font-display font-bold tracking-tight text-white text-xl">Run My Brief<span class="text-emerald-400">/football</span></span>
+      <span class="font-display font-bold tracking-tight text-white text-lg sm:text-xl">Run My Brief<span class="text-emerald-400">/football</span></span>
     </div>
     
     <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
@@ -78,60 +78,28 @@
   </header>
 
   <!-- MAIN CONTENT CONTAINER -->
-  <main class="w-full max-w-6xl mx-auto px-6 pt-2 pb-16 space-y-24">
+  <main class="w-full max-w-6xl mx-auto px-4 sm:px-6 pt-1 pb-16 space-y-20">
 
-    <!-- INTEGRATED HERO & VIDEO WALKTHROUGH SECTION (ABOVE THE FOLD) -->
-    <section id="hero-demo" class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center pt-4 sm:pt-8">
+    <!-- INTEGRATED HERO & VIDEO WALKTHROUGH SECTION -->
+    <section id="hero-demo" class="flex flex-col lg:grid lg:grid-cols-12 gap-5 lg:gap-12 items-center pt-2 sm:pt-6">
       
-      <!-- LEFT COLUMN: COPY & CONVERSION ACTIONS (7 COLS) -->
-      <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
-        
-        <!-- PILL BADGE -->
+      <!-- ITEM 1: HEADLINE BLOCK (Mobile: 1st, Desktop: top left) -->
+      <div class="order-1 lg:col-span-7 space-y-3 sm:space-y-5 text-center lg:text-left">
         <div>
-          <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-slate-900 border border-slate-800 text-xs sm:text-sm font-semibold text-slate-200">
-            <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+          <div class="inline-flex items-center gap-2 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-slate-900 border border-slate-800 text-[11px] sm:text-sm font-semibold text-slate-200">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
             Audience Infrastructure for Football Watchalongs
           </div>
         </div>
 
-        <!-- MAIN HEADLINE -->
         <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.12]">
           Turn live stream hype into <span class="bg-gradient-to-r from-emerald-400 via-teal-200 to-sky-400 bg-clip-text text-transparent">owned subscribers</span>.
         </h1>
-
-        <!-- SUBTITLE -->
-        <p class="text-base sm:text-lg text-slate-300 leading-relaxed font-normal max-w-xl mx-auto lg:mx-0">
-          When the final whistle blows, thousands of fans debate in your chat and bounce the second you end stream. Turn that post-match traffic into an owned subscriber list with automated matchday ballots that capture emails and deliver instant community consensus.
-        </p>
-
-        <!-- CTA CONTAINER -->
-        <div class="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
-          <a href="#request" class="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-white text-black font-extrabold text-sm hover:bg-slate-200 transition shadow-lg shadow-white/5 text-center">
-            Request Free Prototype &rarr;
-          </a>
-          <a href="https://mandem.moosareacts.com/" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-slate-900 border border-emerald-500/30 text-emerald-400 hover:text-emerald-300 hover:border-emerald-500/60 transition text-sm font-semibold">
-            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
-            <span>Live Demo (Moosa Reacts)</span>
-            <span>↗</span>
-          </a>
-        </div>
-        <p class="text-xs text-slate-400 font-medium">Free custom matchday ballot configured for your channel • Zero commitment</p>
-
-        <!-- EDITORIAL CREDIBILITY STRIP -->
-        <div class="pt-6 border-t border-white/5 flex flex-col items-center lg:items-start gap-2.5">
-          <span class="text-xs font-semibold uppercase tracking-wider text-slate-400">Editorial &amp; Sports Media Discipline</span>
-          <div class="flex items-center gap-6 opacity-75 grayscale hover:grayscale-0 transition duration-300">
-            <div class="text-lg font-black tracking-tighter text-slate-200">YAHOO! SPORT</div>
-            <div class="text-lg font-serif font-bold text-slate-200 tracking-wider">Metro Sport</div>
-            <div class="text-sm font-display font-bold text-slate-200 tracking-widest uppercase">Fan Terminal</div>
-          </div>
-        </div>
-
       </div>
 
-      <!-- RIGHT COLUMN: 9:16 VERTICAL VIDEO PLAYER (5 COLS) -->
-      <div class="lg:col-span-5 flex flex-col items-center justify-center">
-        <div class="w-full max-w-[320px] sm:max-w-[340px] aspect-[9/16] rounded-2xl overflow-hidden border border-white/15 shadow-2xl bg-black relative group glow-effect">
+      <!-- ITEM 2: 9:16 VERTICAL VIDEO PLAYER (Mobile: 2nd immediately under headline, Desktop: right side span 5) -->
+      <div class="order-2 lg:order-3 lg:col-span-5 lg:row-span-2 w-full flex flex-col items-center justify-center my-1 lg:my-0">
+        <div class="w-full max-w-[270px] sm:max-w-[320px] aspect-[9/16] rounded-2xl overflow-hidden border border-white/15 shadow-2xl bg-black relative group glow-effect">
           <iframe 
             src="https://www.youtube.com/embed/D-3-Z3FL4bQ?enablejsapi=1&origin=https://runmybrief.com" 
             title="Football Matchday Ballot Walkthrough" 
@@ -141,8 +109,38 @@
             allowfullscreen>
           </iframe>
         </div>
-        <div class="pt-3 text-center">
-          <span class="text-xs font-mono text-slate-400 tracking-wide">45s Walkthrough: From Pinned Chat to Verified Email</span>
+        <div class="pt-2 text-center">
+          <span class="text-[11px] sm:text-xs font-mono text-slate-400 tracking-wide">45s Walkthrough: Pinned Chat to Verified Email</span>
+        </div>
+      </div>
+
+      <!-- ITEM 3: DESCRIPTION, CTAS & CREDIBILITY (Mobile: 3rd right after video, Desktop: bottom left) -->
+      <div class="order-3 lg:order-2 lg:col-span-7 space-y-5 text-center lg:text-left">
+        <p class="text-sm sm:text-lg text-slate-300 leading-relaxed font-normal max-w-xl mx-auto lg:mx-0">
+          When the final whistle blows, thousands of fans debate in your chat and bounce the second you end stream. Turn that post-match traffic into an owned subscriber list with automated matchday ballots that capture emails and deliver instant community consensus.
+        </p>
+
+        <!-- CTA CONTAINER -->
+        <div class="pt-1 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3">
+          <a href="#request" class="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-white text-black font-extrabold text-sm hover:bg-slate-200 transition shadow-lg shadow-white/5 text-center">
+            Request Free Prototype &rarr;
+          </a>
+          <a href="https://mandem.moosareacts.com/" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-slate-900 border border-emerald-500/30 text-emerald-400 hover:text-emerald-300 hover:border-emerald-500/60 transition text-sm font-semibold">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+            <span>Live Demo (Moosa Reacts)</span>
+            <span>↗</span>
+          </a>
+        </div>
+        <p class="text-[11px] sm:text-xs text-slate-400 font-medium">Free custom matchday ballot configured for your channel • Zero commitment</p>
+
+        <!-- EDITORIAL CREDIBILITY STRIP -->
+        <div class="pt-4 border-t border-white/5 flex flex-col items-center lg:items-start gap-2">
+          <span class="text-[11px] sm:text-xs font-semibold uppercase tracking-wider text-slate-400">Editorial &amp; Sports Media Discipline</span>
+          <div class="flex items-center gap-6 opacity-75 grayscale hover:grayscale-0 transition duration-300">
+            <div class="text-base sm:text-lg font-black tracking-tighter text-slate-200">YAHOO! SPORT</div>
+            <div class="text-base sm:text-lg font-serif font-bold text-slate-200 tracking-wider">Metro Sport</div>
+            <div class="text-xs sm:text-sm font-display font-bold text-slate-200 tracking-widest uppercase">Fan Terminal</div>
+          </div>
         </div>
       </div>
 
