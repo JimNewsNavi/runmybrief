@@ -1,4 +1,6 @@
-<!DOCTYPE html><html lang="en-GB"><head>
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="referrer" content="strict-origin-when-cross-origin">
@@ -58,7 +60,7 @@
 <body class="min-h-screen antialiased selection:bg-emerald-500 selection:text-black">
 
   <!-- NAVIGATION -->
-  <header class="w-full max-w-6xl mx-auto px-6 py-6 flex items-center justify-between">
+  <header class="w-full max-w-6xl mx-auto px-6 py-5 flex items-center justify-between">
     <div class="flex items-center gap-3">
       <div class="w-9 h-9 rounded-lg bg-gradient-to-br from-emerald-400 to-teal-700 flex items-center justify-center font-display font-bold text-white text-base shadow-lg shadow-emerald-500/20">
         R
@@ -66,72 +68,70 @@
       <span class="font-display font-bold tracking-tight text-white text-xl">Run My Brief<span class="text-emerald-400">/football</span></span>
     </div>
     
-    <nav class="hidden md:flex items-center gap-8 text-base font-medium text-slate-300">
-      <a href="#demo" class="hover:text-white transition">Product Demo</a>
+    <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+      <a href="#hero-demo" class="hover:text-white transition">Product Demo</a>
       <a href="#mechanisms" class="hover:text-white transition">Lead Engines</a>
       <a href="#pedigree" class="hover:text-white transition">Pedigree</a>
       <a href="#pricing" class="hover:text-white transition">Plans</a>
-      <a href="#request" class="px-5 py-2.5 rounded-xl bg-white text-black font-bold hover:bg-slate-200 transition duration-200 text-sm">Request Matchday Build</a>
+      <a href="#request" class="px-5 py-2.5 rounded-xl bg-white text-black font-bold hover:bg-slate-200 transition duration-200 text-xs uppercase tracking-wider">Request Matchday Build</a>
     </nav>
   </header>
 
   <!-- MAIN CONTENT CONTAINER -->
-  <main class="w-full max-w-6xl mx-auto px-6 pt-4 pb-16 space-y-20">
+  <main class="w-full max-w-6xl mx-auto px-6 pt-2 pb-16 space-y-24">
 
-    <!-- HERO SECTION -->
-    <section class="text-center max-w-3xl mx-auto space-y-6">
+    <!-- INTEGRATED HERO & VIDEO WALKTHROUGH SECTION (ABOVE THE FOLD) -->
+    <section id="hero-demo" class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center pt-4 sm:pt-8">
       
-      <!-- PILL TAG -->
-      <div>
-        <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-slate-900 border border-slate-800 text-sm font-semibold text-slate-200">
-          <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
-          Audience Infrastructure for Live Football Creators &amp; Watchalongs
+      <!-- LEFT COLUMN: COPY & CONVERSION ACTIONS (7 COLS) -->
+      <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+        
+        <!-- PILL BADGE -->
+        <div>
+          <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-slate-900 border border-slate-800 text-xs sm:text-sm font-semibold text-slate-200">
+            <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+            Audience Infrastructure for Football Watchalongs
+          </div>
         </div>
-      </div>
 
-      <!-- MAIN HEADLINE -->
-      <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-white leading-[1.14]">
-        Turn live stream hype into <span class="bg-gradient-to-r from-emerald-400 via-teal-200 to-sky-400 bg-clip-text text-transparent">owned subscribers</span>.
-      </h1>
+        <!-- MAIN HEADLINE -->
+        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.12]">
+          Turn live stream hype into <span class="bg-gradient-to-r from-emerald-400 via-teal-200 to-sky-400 bg-clip-text text-transparent">owned subscribers</span>.
+        </h1>
 
-      <!-- SUB-HEADLINE -->
-      <p class="text-lg sm:text-xl text-slate-300 leading-relaxed font-normal max-w-2xl mx-auto">
-        When the final whistle blows, thousands of fans debate in your chat—and disappear the second you end stream. Turn that post-match traffic into an owned subscriber list with automated matchday ballots that capture emails and deliver instant community consensus.
-      </p>
-
-      <!-- UNIFIED PRIMARY HERO CTA -->
-      <div class="pt-2 flex flex-col items-center justify-center gap-3">
-        <a href="#request" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-white text-black font-extrabold text-base hover:bg-slate-200 transition shadow-lg shadow-white/5">
-          Request Free Prototype &rarr;
-        </a>
-        <p class="text-sm text-slate-400 font-medium">Free custom matchday ballot configured for your channel • Zero commitment</p>
-      </div>
-
-      <!-- AUTHORITY & PRESS BAR -->
-      <div class="pt-8 border-t border-white/5 flex flex-col items-center gap-3.5">
-        <span class="text-sm font-semibold uppercase tracking-wider text-slate-400">Editorial &amp; Sports Media Discipline</span>
-        <div class="flex items-center justify-center gap-8 opacity-75 grayscale hover:grayscale-0 transition duration-300">
-          <div class="text-xl font-black tracking-tighter text-slate-200">YAHOO! SPORT</div>
-          <div class="text-xl font-serif font-bold text-slate-200 tracking-wider">Metro Sport</div>
-          <div class="text-base font-display font-bold text-slate-200 tracking-widest uppercase">Fan Terminal</div>
-        </div>
-      </div>
-
-    </section>
-
-    <!-- LIVE DEMO EMBED SECTION -->
-    <section id="demo" class="max-w-4xl mx-auto space-y-6">
-      <div class="text-center space-y-3">
-        <span class="text-sm font-bold text-emerald-400 uppercase tracking-widest">Interactive Video Walkthrough</span>
-        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-white">Watch The Matchday Ballot in Action</h2>
-        <p class="text-base text-slate-300 max-w-xl mx-auto">
-          See how raw post-match emotion from live watchalongs is seamlessly routed into an interactive ratings card that locks in verified emails.
+        <!-- SUBTITLE -->
+        <p class="text-base sm:text-lg text-slate-300 leading-relaxed font-normal max-w-xl mx-auto lg:mx-0">
+          When the final whistle blows, thousands of fans debate in your chat and bounce the second you end stream. Turn that post-match traffic into an owned subscriber list with automated matchday ballots that capture emails and deliver instant community consensus.
         </p>
+
+        <!-- CTA CONTAINER -->
+        <div class="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+          <a href="#request" class="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-white text-black font-extrabold text-sm hover:bg-slate-200 transition shadow-lg shadow-white/5 text-center">
+            Request Free Prototype &rarr;
+          </a>
+          <a href="https://mandem.moosareacts.com/" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-slate-900 border border-emerald-500/30 text-emerald-400 hover:text-emerald-300 hover:border-emerald-500/60 transition text-sm font-semibold">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+            <span>Live Demo (Moosa Reacts)</span>
+            <span>↗</span>
+          </a>
+        </div>
+        <p class="text-xs text-slate-400 font-medium">Free custom matchday ballot configured for your channel • Zero commitment</p>
+
+        <!-- EDITORIAL CREDIBILITY STRIP -->
+        <div class="pt-6 border-t border-white/5 flex flex-col items-center lg:items-start gap-2.5">
+          <span class="text-xs font-semibold uppercase tracking-wider text-slate-400">Editorial &amp; Sports Media Discipline</span>
+          <div class="flex items-center gap-6 opacity-75 grayscale hover:grayscale-0 transition duration-300">
+            <div class="text-lg font-black tracking-tighter text-slate-200">YAHOO! SPORT</div>
+            <div class="text-lg font-serif font-bold text-slate-200 tracking-wider">Metro Sport</div>
+            <div class="text-sm font-display font-bold text-slate-200 tracking-widest uppercase">Fan Terminal</div>
+          </div>
+        </div>
+
       </div>
 
-      <!-- 9:16 VERTICAL VIDEO PLAYER CONTAINER -->
-      <div class="flex justify-center">
-        <div class="relative w-full max-w-[340px] aspect-[9/16] rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-black">
+      <!-- RIGHT COLUMN: 9:16 VERTICAL VIDEO PLAYER (5 COLS) -->
+      <div class="lg:col-span-5 flex flex-col items-center justify-center">
+        <div class="w-full max-w-[320px] sm:max-w-[340px] aspect-[9/16] rounded-2xl overflow-hidden border border-white/15 shadow-2xl bg-black relative group glow-effect">
           <iframe 
             src="https://www.youtube.com/embed/D-3-Z3FL4bQ?enablejsapi=1&origin=https://runmybrief.com" 
             title="Football Matchday Ballot Walkthrough" 
@@ -141,27 +141,21 @@
             allowfullscreen>
           </iframe>
         </div>
+        <div class="pt-3 text-center">
+          <span class="text-xs font-mono text-slate-400 tracking-wide">45s Walkthrough: From Pinned Chat to Verified Email</span>
+        </div>
       </div>
 
-      <!-- LIVE TERMINAL PROOF CALLOUT -->
-      <div class="text-center pt-2 space-y-2">
-        <a href="https://mandem.moosareacts.com/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-900 border border-emerald-500/30 text-emerald-400 hover:text-emerald-300 hover:border-emerald-500/60 transition text-sm font-semibold shadow-md">
-          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
-          <span>View Live Production Terminal (Moosa Reacts)</span>
-          <span class="text-base">&rarr;</span>
-        </a>
-        <p class="text-xs text-slate-400 font-mono">Pinned chat link &rarr; Mobile ballot vote &rarr; Email captured &rarr; Live consensus report</p>
-      </div>
     </section>
 
     <!-- MECHANISMS & RETENTION ENGINES -->
-    <section id="mechanisms" class="space-y-8">
+    <section id="mechanisms" class="space-y-8 pt-4">
       <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
         <div>
-          <span class="text-sm font-bold text-emerald-400 uppercase tracking-widest">Year-Round Lead Architecture</span>
+          <span class="text-xs font-bold text-emerald-400 uppercase tracking-widest">Year-Round Lead Architecture</span>
           <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-white mt-1">Beyond The 90 Minutes</h2>
         </div>
-        <p class="text-base text-slate-300 max-w-md">
+        <p class="text-sm sm:text-base text-slate-300 max-w-md">
           Football channels run on distinct weekly cycles. The dynamic modules adapt to the fixture calendar so lead capture operates continuously.
         </p>
       </div>
@@ -181,11 +175,11 @@
             <h3 class="text-xl font-bold text-white flex items-center justify-between">
               Post-Match Ratings
             </h3>
-            <p class="text-base text-slate-300 mt-3 leading-relaxed">
+            <p class="text-sm text-slate-300 mt-3 leading-relaxed">
               Deploys the moment the referee whistles. Captures raw fan feedback. Fans vote on the manager and key performers to reveal the live community consensus.
             </p>
           </div>
-          <div class="mt-6 pt-4 border-t border-white/5 flex items-center justify-between text-base text-slate-400">
+          <div class="mt-6 pt-4 border-t border-white/5 flex items-center justify-between text-sm text-slate-400">
             <span>Timing: <strong class="text-slate-200 font-medium">Post-Match Debrief</strong></span>
             <a href="https://mandem.moosareacts.com/" target="_blank" rel="noopener noreferrer" class="text-emerald-400 font-bold hover:underline">Live Preview ↗</a>
           </div>
@@ -204,11 +198,11 @@
             <h3 class="text-xl font-bold text-white flex items-center justify-between">
               Lineup Predictor
             </h3>
-            <p class="text-base text-slate-300 mt-3 leading-relaxed">
+            <p class="text-sm text-slate-300 mt-3 leading-relaxed">
               Activated 48 hours before kick-off. Fans pick their tactical XI and score predictions. Captures email entries before team news breaks on stream.
             </p>
           </div>
-          <div class="mt-6 pt-4 border-t border-white/5 flex items-center justify-between text-base text-slate-400">
+          <div class="mt-6 pt-4 border-t border-white/5 flex items-center justify-between text-sm text-slate-400">
             <span>Timing: <strong class="text-slate-200 font-medium">Pre-Match Previews</strong></span>
             <span class="text-sky-400 font-bold">Tactical Fans</span>
           </div>
@@ -227,11 +221,11 @@
             <h3 class="text-xl font-bold text-white flex items-center justify-between">
               Squad Overhaul Engine
             </h3>
-            <p class="text-base text-slate-300 mt-3 leading-relaxed">
+            <p class="text-sm text-slate-300 mt-3 leading-relaxed">
               Keeps subscriber growth active during international breaks and transfer windows. Viewers sort squad personnel and receive the aggregate community tier list by email.
             </p>
           </div>
-          <div class="mt-6 pt-4 border-t border-white/5 flex items-center justify-between text-base text-slate-400">
+          <div class="mt-6 pt-4 border-t border-white/5 flex items-center justify-between text-sm text-slate-400">
             <span>Timing: <strong class="text-slate-200 font-medium">Transfer Windows</strong></span>
             <span class="text-red-400 font-bold">High Volume</span>
           </div>
@@ -243,9 +237,9 @@
     <!-- EDITORIAL & OPERATIONAL PEDIGREE -->
     <section id="pedigree" class="glass-card rounded-2xl p-8 sm:p-10 space-y-6">
       <div class="max-w-2xl">
-        <span class="text-sm font-bold text-emerald-400 uppercase tracking-widest">Turnkey Operation</span>
+        <span class="text-xs font-bold text-emerald-400 uppercase tracking-widest">Turnkey Operation</span>
         <h2 class="text-2xl sm:text-3xl font-bold text-white mt-1">Zero Overhead For Content Creators</h2>
-        <p class="text-base text-slate-300 leading-relaxed mt-2">
+        <p class="text-sm sm:text-base text-slate-300 leading-relaxed mt-2">
           Focus entirely on broadcasting, debate, and analysis without manual technical chores. Built by former UK sports journalists and digital media editors who understand the fast pace of live football.
         </p>
       </div>
@@ -274,9 +268,9 @@
     <!-- PRICING TIERS -->
     <section id="pricing" class="space-y-8">
       <div class="text-center max-w-2xl mx-auto space-y-3">
-        <span class="text-sm font-bold text-emerald-400 uppercase tracking-widest">Predictable Infrastructure</span>
+        <span class="text-xs font-bold text-emerald-400 uppercase tracking-widest">Predictable Infrastructure</span>
         <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-white">Simple Plans For Every Matchday</h2>
-        <p class="text-base text-slate-300 leading-relaxed">
+        <p class="text-sm sm:text-base text-slate-300 leading-relaxed">
           Zero setup fees. Zero maintenance. Cancel or pause anytime with one click.
         </p>
       </div>
@@ -287,7 +281,7 @@
         <div class="glass-card rounded-2xl p-7 sm:p-8 flex flex-col justify-between border border-white/5">
           <div class="space-y-5">
             <div>
-              <span class="text-sm font-bold uppercase tracking-wider text-slate-300">Matchday Core</span>
+              <span class="text-xs font-bold uppercase tracking-wider text-slate-300">Matchday Core</span>
               <div class="flex items-baseline gap-1 mt-2">
                 <span class="text-5xl font-extrabold text-white font-display">£149</span>
                 <span class="text-sm text-slate-400">/mo</span>
@@ -318,7 +312,7 @@
           </div>
           <div class="space-y-5">
             <div>
-              <span class="text-sm font-bold uppercase tracking-wider text-emerald-400">Season Pass</span>
+              <span class="text-xs font-bold uppercase tracking-wider text-emerald-400">Season Pass</span>
               <div class="flex items-baseline gap-1 mt-2">
                 <span class="text-5xl font-extrabold text-white font-display">£249</span>
                 <span class="text-sm text-slate-400">/mo</span>
@@ -345,40 +339,40 @@
       </div>
 
       <!-- RISK REVERSAL FOOTNOTE -->
-      <div class="p-4 rounded-xl bg-slate-900/60 border border-white/5 text-center text-sm text-slate-300 max-w-xl mx-auto flex items-center justify-center gap-5 flex-wrap">
-        <span class="flex items-center gap-2"><span class="text-emerald-400">✓</span> Zero Setup Fees</span>
-        <span class="flex items-center gap-2"><span class="text-emerald-400">✓</span> Cancel Anytime</span>
-        <span class="flex items-center gap-2"><span class="text-emerald-400">✓</span> Free Channel Prototype First</span>
+      <div class="p-4 rounded-xl bg-slate-900/60 border border-white/5 text-center text-xs sm:text-sm text-slate-300 max-w-xl mx-auto flex items-center justify-center gap-5 flex-wrap">
+        <span class="flex items-center gap-2"><span class="text-emerald-400 font-bold">✓</span> Zero Setup Fees</span>
+        <span class="flex items-center gap-2"><span class="text-emerald-400 font-bold">✓</span> Cancel Anytime</span>
+        <span class="flex items-center gap-2"><span class="text-emerald-400 font-bold">✓</span> Free Channel Prototype First</span>
       </div>
     </section>
 
     <!-- INBOUND DEMO REQUEST FORM -->
     <section id="request" class="max-w-xl mx-auto glass-card rounded-2xl p-8 sm:p-10 space-y-6">
       <div class="text-center space-y-2">
-        <span class="text-sm font-bold text-emerald-400 uppercase tracking-widest">Risk-Free Channel Test</span>
+        <span class="text-xs font-bold text-emerald-400 uppercase tracking-widest">Risk-Free Channel Test</span>
         <h2 class="text-2xl sm:text-3xl font-bold text-white font-display">Get Your Free Matchday Prototype</h2>
-        <p class="text-sm sm:text-base text-slate-300 leading-relaxed">
+        <p class="text-sm text-slate-300 leading-relaxed">
           Provide your channel details and upcoming fixture. We will build a functioning matchday ballot and consensus report prototype for your channel at zero cost.
         </p>
       </div>
 
-      <form id="prototypeForm" onsubmit="handlePrototypeSubmit(event)" class="space-y-5">
+      <form id="prototypeForm" onsubmit="handlePrototypeSubmit(event)" class="space-y-4">
         <div>
-          <label class="block text-sm font-bold uppercase tracking-wider text-slate-300 mb-2">Channel Name / YouTube Handle</label>
-          <input type="text" id="reqHandle" placeholder="e.g. @UnitedStand or @StretfordPaddock" required class="w-full px-4 py-3.5 rounded-xl bg-slate-900 border border-slate-800 text-white placeholder-slate-500 focus:outline-none focus:border-emerald-500 text-base">
+          <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1.5">Channel Name / YouTube Handle</label>
+          <input type="text" id="reqHandle" placeholder="e.g. @UnitedStand or @StretfordPaddock" required class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-800 text-white placeholder-slate-500 focus:outline-none focus:border-emerald-500 text-sm">
         </div>
 
         <div>
-          <label class="block text-sm font-bold uppercase tracking-wider text-slate-300 mb-2">Club Supported / Primary Coverage</label>
-          <input type="text" id="reqClub" placeholder="e.g. Manchester United, Arsenal, Liverpool" required class="w-full px-4 py-3.5 rounded-xl bg-slate-900 border border-slate-800 text-white placeholder-slate-500 focus:outline-none focus:border-emerald-500 text-base">
+          <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1.5">Club Supported / Primary Coverage</label>
+          <input type="text" id="reqClub" placeholder="e.g. Manchester United, Arsenal, Liverpool" required class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-800 text-white placeholder-slate-500 focus:outline-none focus:border-emerald-500 text-sm">
         </div>
 
         <div>
-          <label class="block text-sm font-bold uppercase tracking-wider text-slate-300 mb-2">Contact Email Address</label>
-          <input type="email" id="reqEmail" placeholder="name@domain.com" required class="w-full px-4 py-3.5 rounded-xl bg-slate-900 border border-slate-800 text-white placeholder-slate-500 focus:outline-none focus:border-emerald-500 text-base">
+          <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1.5">Contact Email Address</label>
+          <input type="email" id="reqEmail" placeholder="name@domain.com" required class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-800 text-white placeholder-slate-500 focus:outline-none focus:border-emerald-500 text-sm">
         </div>
 
-        <button type="submit" id="reqSubmitBtn" class="w-full py-4 rounded-xl bg-white hover:bg-slate-200 text-black font-extrabold text-base transition mt-2">
+        <button type="submit" id="reqSubmitBtn" class="w-full py-4 rounded-xl bg-white hover:bg-slate-200 text-black font-extrabold text-sm transition mt-2">
           Request Free Prototype &rarr;
         </button>
       </form>
@@ -391,7 +385,7 @@
   </main>
 
   <!-- FOOTER -->
-  <footer class="w-full border-t border-white/5 py-8 text-center text-sm text-slate-400">
+  <footer class="w-full border-t border-white/5 py-8 text-center text-xs text-slate-400">
     Run My Brief • Engineered Lead Infrastructure for Live Football Creators &amp; Media Networks • <a href="mailto:jimmy@runmybrief.com" class="text-slate-200 hover:text-white transition font-medium">jimmy@runmybrief.com</a>
   </footer>
 
@@ -435,4 +429,5 @@
     }
   </script>
 
-</body></html>
+</body>
+</html>
