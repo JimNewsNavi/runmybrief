@@ -1,0 +1,61 @@
+---
+// src/pages/contact.astro
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Support & System Operations • Run My Brief">
+  <main class="min-h-screen bg-[#F8FAFC] text-[#0F172A] px-6 py-14 sm:py-20">
+    <div class="max-w-3xl mx-auto space-y-10">
+      
+      <!-- HEADER -->
+      <div class="border-b border-slate-200 pb-6 space-y-3">
+        <a href="/" class="text-xs text-[#2563EB] hover:underline font-mono font-bold flex items-center gap-1.5 transition">
+          <span>&larr;</span> <span>Return to Sandbox Overview</span>
+        </a>
+        <div class="inline-flex items-center gap-2 px-2.5 py-0.5 rounded bg-blue-50 border border-blue-200 text-[#2563EB] font-mono text-[11px] font-bold uppercase tracking-wider">
+          Operations &amp; Client Support
+        </div>
+        <h1 class="text-3xl sm:text-4xl font-black tracking-tight text-[#0F172A]">
+          Direct Support Desk
+        </h1>
+        <p class="text-xs text-slate-500 font-mono">
+          System Integrations, Dispatch Webhooks &amp; Data Enquiries
+        </p>
+      </div>
+
+      <!-- BODY CONTENT -->
+      <div class="space-y-8 text-sm text-slate-700 leading-relaxed">
+        
+        <section class="space-y-3">
+          <h2 class="font-bold uppercase tracking-wider text-xs text-slate-900 font-mono">// 1. Direct Contact Channel</h2>
+          <p>
+            For questions regarding custom review routing rules, automated webhook handovers into your field management software, or account configuration, contact our technical operations lead directly:
+          </p>
+          <div class="p-5 bg-white border border-slate-200 rounded-xl shadow-sm max-w-md w-full space-y-2">
+            <span class="text-slate-500 text-xs uppercase block font-mono font-bold">Principal Systems Contact</span>
+            <a href="mailto:jimmy@runmybrief.com" class="text-[#2563EB] font-bold text-base hover:underline block break-all font-mono">
+              jimmy@runmybrief.com
+            </a>
+            <p class="text-xs text-slate-500 pt-1">Monitored during standard UK business hours for technical and platform queries.</p>
+          </div>
+        </section>
+
+        <section class="space-y-3">
+          <h2 class="font-bold uppercase tracking-wider text-xs text-slate-900 font-mono">// 2. Review Link &amp; Place ID Setup</h2>
+          <p>
+            Need assistance generating direct Google write-review links or troubleshooting modal triggers for multi-engineer setups? Send your trade business name and postcodes to the address above for configuration help.
+          </p>
+        </section>
+
+        <section class="space-y-3">
+          <h2 class="font-bold uppercase tracking-wider text-xs text-slate-900 font-mono">// 3. Subject Access &amp; Data Requests</h2>
+          <p>
+            In accordance with the UK General Data Protection Regulation (UK GDPR), formal customer data erasure or retrieval requests submitted by homeowners or client trade desks are acknowledged and processed within the statutory 30-day window.
+          </p>
+        </section>
+
+      </div>
+
+    </div>
+  </main>
+</Layout>

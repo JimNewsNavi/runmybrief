@@ -1,0 +1,26 @@
+{
+  "slug": "kian-diallo",
+  "name": "Kian Diallo",
+  "title": "Kian Diallo - Verified Scouting Dossier",
+  "position": "Defensive Midfielder / Central Midfielder",
+  "age": 19,
+  "dob": "2007-04-19",
+  "heightWeight": "183cm / 77kg",
+  "preferredFoot": "Right",
+  "nationality": "French / Senegalese (EU National)",
+  "status": "Verified Dossier Active",
+  "representation": "Independent Submission // Open to Representation",
+  "medical": "Clean Record (No recorded matches missed)",
+  "tacticalRole": "Defensive Anchor",
+  "maxSpeed": "34.5 km/h",
+  "youtubeId": "Js1W1wFiKK8",
+  "automatedTriageTier": "Priority Tier A",
+  "triageNotes": "Exceptional tactical reading, elite duel success rate in defensive transition, and dual-nationality status simplifies European registration.",
+  "competitions": [
+    {
+      "name": "Lyon Academy (U19)",
+      "apps": 24,
+      "goals": 4
+    }
+  ]
+}

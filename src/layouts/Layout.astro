@@ -1,0 +1,116 @@
+---
+// src/layouts/Layout.astro
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  brandText?: string;
+  brandSub?: string;
+}
+
+const { 
+  title, 
+  brandText = "RUN MY BRIEF", 
+  brandSub = "TRADE REVIEWS & FEEDBACK ROUTING" 
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en-GB" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body class="min-h-screen antialiased bg-[#F8FAFC] text-[#0F172A] flex flex-col justify-between font-sans selection:bg-[#2563EB] selection:text-white">
+    
+    <!-- TOP UTILITY BAR -->
+    <div class="bg-[#0F172A] text-slate-300 text-xs border-b border-slate-800 px-6 py-2">
+      <div class="max-w-6xl mx-auto flex flex-wrap items-center justify-between gap-2">
+        <div class="flex items-center gap-2 font-mono text-[11px]">
+          <span class="inline-block w-2 h-2 rounded-full bg-[#10B981]"></span>
+          <span class="text-white font-semibold">STATUS:</span> GOOGLE REVIEW ROUTING ONLINE
+        </div>
+        <div class="font-mono text-[11px] text-slate-400 hidden sm:block">
+          BUILT FOR UK PLUMBING &amp; HEATING CONTRACTORS
+        </div>
+      </div>
+    </div>
+
+    <!-- MAIN NAVIGATION -->
+    <header class="sticky top-0 z-50 bg-white border-b border-slate-200 shadow-xs">
+      <nav class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+        <a href="/" class="flex items-center gap-3">
+          <div class="w-8 h-8 rounded bg-[#2563EB] text-white font-black text-sm flex items-center justify-center tracking-tighter">
+            RMB
+          </div>
+          <div class="flex flex-col">
+            <span class="text-base font-black tracking-tight text-[#0F172A] leading-none">{brandText}</span>
+            <span class="text-[10px] font-mono font-semibold text-slate-500 tracking-wider mt-0.5">{brandSub}</span>
+          </div>
+        </a>
+        
+        <div class="flex items-center gap-3">
+          <a href="#sandbox" class="px-4 py-2 bg-[#0F172A] hover:bg-slate-800 text-white font-semibold text-xs rounded transition">
+            Test Workflow &darr;
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="flex-grow">
+      <slot />
+    </main>
+
+    <!-- COOKIE CONSENT BANNER -->
+    <div id="cookie-banner" class="fixed bottom-4 left-4 right-4 md:left-auto md:right-4 md:max-w-md z-50 bg-[#0F172A] text-white border border-slate-700 p-5 rounded-lg shadow-xl hidden flex-col gap-3">
+      <div class="text-xs text-slate-300 leading-relaxed">
+        Essential cookies handle page state and prevent duplicate submissions. No tracking or advertising cookies are stored.
+      </div>
+      <div class="flex items-center gap-3 pt-1">
+        <button id="accept-cookies" class="flex-1 py-2 bg-[#2563EB] hover:bg-blue-500 text-white font-bold text-xs uppercase tracking-wider rounded transition cursor-pointer">
+          Accept
+        </button>
+        <button id="decline-cookies" class="px-4 py-2 bg-slate-800 border border-slate-700 text-slate-300 font-bold text-xs uppercase tracking-wider rounded hover:text-white transition cursor-pointer">
+          Dismiss
+        </button>
+      </div>
+    </div>
+
+    <footer class="border-t border-slate-200 bg-white py-10 px-6 text-center text-xs text-slate-500 space-y-3">
+      <div class="flex flex-wrap justify-center gap-6 font-semibold text-slate-600">
+        <a href="/privacy" class="hover:text-[#2563EB] transition-colors">Privacy Policy</a>
+        <a href="/terms" class="hover:text-[#2563EB] transition-colors">Terms of Service</a>
+        <a href="/cookies" class="hover:text-[#2563EB] transition-colors">Cookies</a>
+        <a href="/contact" class="hover:text-[#2563EB] transition-colors">Contact</a>
+      </div>
+      <p>© {new Date().getFullYear()} Run My Brief. Post-job review links and private callback routing for UK trade contractors.</p>
+    </footer>
+
+    <script>
+      const cookieBanner = document.getElementById('cookie-banner');
+      const acceptBtn = document.getElementById('accept-cookies');
+      const declineBtn = document.getElementById('decline-cookies');
+
+      if (!localStorage.getItem('cookieConsent')) {
+        setTimeout(() => {
+          cookieBanner?.classList.remove('hidden');
+          cookieBanner?.classList.add('flex');
+        }, 1000);
+      }
+
+      acceptBtn?.addEventListener('click', () => {
+        localStorage.setItem('cookieConsent', 'accepted');
+        cookieBanner?.classList.remove('flex');
+        cookieBanner?.classList.add('hidden');
+      });
+
+      declineBtn?.addEventListener('click', () => {
+        localStorage.setItem('cookieConsent', 'declined');
+        cookieBanner?.classList.remove('flex');
+        cookieBanner?.classList.add('hidden');
+      });
+    </script>
+  </body>
+</html>

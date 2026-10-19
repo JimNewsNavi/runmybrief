@@ -1,0 +1,26 @@
+{
+  "slug": "ethan-cole",
+  "name": "Ethan Cole",
+  "title": "Ethan Cole - Scouting Dossier",
+  "position": "Central Midfield / Defensive Midfield",
+  "age": 19,
+  "dob": "2007-02-18",
+  "heightWeight": "185cm / 78kg",
+  "preferredFoot": "Right",
+  "nationality": "UK Passport",
+  "status": "Scholarship / Under Contract",
+  "representation": "Independent Submission // Open to Representation",
+  "medical": "Clean Record",
+  "tacticalRole": "Box-to-Box Midfielder / Transitional Anchor",
+  "maxSpeed": "33.4 km/h",
+  "youtubeId": "fg6ZuQfULIQ",
+  "automatedTriageTier": "Priority Tier A",
+  "triageNotes": "Verified athletic profile, high-press recovery metrics, and clean academy release documentation on file.",
+  "competitions": [
+    {
+      "name": "Charlton Athletic U21",
+      "apps": 24,
+      "goals": 6
+    }
+  ]
+}
