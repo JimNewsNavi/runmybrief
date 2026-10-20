@@ -72,9 +72,9 @@ const GOOGLE_PLUMBER_URL = "https://g.page/r/CeEP1k8UUIk_EAE/review";
               </div>
 
               <div class="bg-[#0F172A] border-l-4 border-[#F59E0B] border-t border-r border-b border-slate-700 rounded p-3">
-                <span class="font-mono text-[10px] text-[#F59E0B] font-bold uppercase block">If Snag (1–3★)</span>
+                <span class="font-mono text-[10px] text-[#F59E0B] font-bold uppercase block">If Issue (1–3★)</span>
                 <strong class="text-white block mt-0.5">Office Callback Alert</strong>
-                <p class="text-slate-400 text-[11px] mt-1">Private snag ticket logged for your senior engineer.</p>
+                <p class="text-slate-400 text-[11px] mt-1">Private ticket logged directly for your senior engineer.</p>
               </div>
             </div>
           </div>
@@ -101,7 +101,7 @@ const GOOGLE_PLUMBER_URL = "https://g.page/r/CeEP1k8UUIk_EAE/review";
             <h2 class="text-lg font-extrabold text-[#0F172A]">Two-Sided Live System Test</h2>
           </div>
           <p class="text-xs text-slate-600 mt-1">
-            Click <strong class="text-[#0F172A]">4★ or 5★</strong> on the customer phone (left) to test the Google Local Services review link, or click <strong class="text-[#0F172A]">1–3★</strong> to log a snag into the Office Dispatch table (right).
+            Click <strong class="text-[#0F172A]">4★ or 5★</strong> on the customer phone (left) to test the Google Local Services review link, or click <strong class="text-[#0F172A]">1–3★</strong> to route an issue into the Office Dispatch table (right).
           </p>
         </div>
         <div class="text-xs font-mono text-slate-500">
@@ -115,7 +115,7 @@ const GOOGLE_PLUMBER_URL = "https://g.page/r/CeEP1k8UUIk_EAE/review";
         <!-- LEFT COLUMN: HOMEOWNER MOBILE VIEW -->
         <div class="lg:col-span-5 space-y-3">
           <div class="flex items-center justify-between px-1">
-            <span class="font-mono text-xs font-bold uppercase text-slate-700">1. Homeowner Phone Screen</span>
+            <span class="font-mono text-xs font-bold uppercase text-slate-700">Homeowner Phone Screen</span>
             <button type="button" id="btn-reset-guest-card" class="px-3 py-1 bg-slate-200 hover:bg-slate-300 text-slate-800 font-mono text-[11px] font-bold rounded transition cursor-pointer">
               &#8635; Reset Phone
             </button>
@@ -131,7 +131,7 @@ const GOOGLE_PLUMBER_URL = "https://g.page/r/CeEP1k8UUIk_EAE/review";
               
               <!-- Professional Plumber Banner Image -->
               <div class="relative h-28 bg-slate-900 overflow-hidden">
-                <img src="https://cdn.pixabay.com/photo/2015/07/11/14/53/plumbing-840835_1280.jpg" />
+                <img src="https://cdn.pixabay.com/photo/2015/07/11/14/53/plumbing-840835_1280.jpg" alt="Plumbing engineer service banner" />
                 <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent"></div>
                 <div class="absolute bottom-2.5 left-4 text-white flex items-center justify-between right-4">
                   <span class="bg-[#2563EB] text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider">Gas Safe Registered</span>
@@ -178,7 +178,7 @@ const GOOGLE_PLUMBER_URL = "https://g.page/r/CeEP1k8UUIk_EAE/review";
                       <div class="text-sm font-extrabold text-[#0F172A] group-hover:text-amber-800">1–3★ — Something Needs Sorting</div>
                       <div class="text-xs text-slate-600">Request a priority callback from the office</div>
                     </div>
-                    <span class="px-2 py-1 bg-amber-100 text-amber-900 font-mono text-xs font-bold rounded">Snag</span>
+                    <span class="px-2 py-1 bg-amber-100 text-amber-900 font-mono text-xs font-bold rounded">Callback</span>
                   </button>
                 </div>
 
@@ -196,10 +196,10 @@ const GOOGLE_PLUMBER_URL = "https://g.page/r/CeEP1k8UUIk_EAE/review";
                   </div>
                 </div>
 
-                <!-- STEP 3: PRIVATE SNAG / CALLBACK FORM (1-3 STARS) -->
+                <!-- STEP 3: PRIVATE ISSUE / CALLBACK FORM (1-3 STARS) -->
                 <div id="step-private-feedback" class="hidden space-y-3">
                   <div class="bg-amber-50 border border-amber-200 rounded p-3">
-                    <h4 class="text-xs font-extrabold text-amber-950 uppercase">Direct Office Snag Line</h4>
+                    <h4 class="text-xs font-extrabold text-amber-950 uppercase">Direct Office Attention</h4>
                     <p class="text-xs text-amber-900 mt-0.5">This goes straight to our dispatch manager's phone so we can put things right today.</p>
                   </div>
 
@@ -230,7 +230,7 @@ const GOOGLE_PLUMBER_URL = "https://g.page/r/CeEP1k8UUIk_EAE/review";
                   <div class="w-10 h-10 bg-emerald-100 text-emerald-800 rounded-full flex items-center justify-center mx-auto font-black text-lg">
                     ✓
                   </div>
-                  <h4 class="text-base font-extrabold text-[#0F172A]">Snag Sent to Office Dispatch</h4>
+                  <h4 class="text-base font-extrabold text-[#0F172A]">Direct Notice Sent to Dispatch</h4>
                   <p class="text-xs text-slate-600">Our senior engineer has been alerted and will call you shortly to sort this out.</p>
                 </div>
 
@@ -247,7 +247,7 @@ const GOOGLE_PLUMBER_URL = "https://g.page/r/CeEP1k8UUIk_EAE/review";
         <!-- RIGHT COLUMN: OFFICE DISPATCH COMMAND CENTRE -->
         <div class="lg:col-span-7 space-y-3">
           <div class="flex items-center justify-between px-1">
-            <span class="font-mono text-xs font-bold uppercase text-slate-700">2. Office Dispatch &amp; Snag Log</span>
+            <span class="font-mono text-xs font-bold uppercase text-slate-700">2. Office Dispatch &amp; Issue Log</span>
             <span id="entry-count" class="font-mono text-xs font-bold text-[#10B981]">● Live Webhook Connected</span>
           </div>
 
@@ -260,7 +260,7 @@ const GOOGLE_PLUMBER_URL = "https://g.page/r/CeEP1k8UUIk_EAE/review";
                 <span id="kpi-public" class="text-xl font-black text-[#10B981]">142 Jobs</span>
               </div>
               <div class="p-4">
-                <span class="font-mono text-[10px] font-bold uppercase text-slate-500 block">Snags Caught Privately</span>
+                <span class="font-mono text-[10px] font-bold uppercase text-slate-500 block">Issues Handled Privately</span>
                 <span id="kpi-intercepted" class="text-xl font-black text-[#F59E0B]">19 Jobs</span>
               </div>
               <div class="p-4">
@@ -283,14 +283,14 @@ const GOOGLE_PLUMBER_URL = "https://g.page/r/CeEP1k8UUIk_EAE/review";
                 <tbody id="dashboard-rows" class="divide-y divide-slate-200 text-[#0F172A]">
                   <tr class="cursor-pointer hover:bg-slate-50 transition feedback-row bg-blue-50/70" 
                       data-guest="Mr. Arthur Pendelton • SW14" 
-                      data-rating="1–3★ Snag Reported" 
-                      data-route="Kept Private -> Sent to Office" 
+                      data-rating="1–3★ Issue Reported" 
+                      data-route="Directed to Office -> Priority Action" 
                       data-contact="arthur.p@outlook.com • 07700 900412" 
                       data-time="Just now • Boiler Service" 
                       data-notes="Boiler pressure dropped back down to 0.5 bar two hours after engineer left. Needs quick callback to check expansion vessel.">
                     <td class="p-3.5 font-bold text-[#2563EB] underline guest-name-cell">Mr. Arthur Pendelton • SW14</td>
-                    <td class="p-3.5 font-semibold text-amber-700">1–3★ Snag</td>
-                    <td class="p-3.5 text-slate-600">Blocked from Google</td>
+                    <td class="p-3.5 font-semibold text-amber-700">1–3★ Issue</td>
+                    <td class="p-3.5 text-slate-600">Directed to Office</td>
                     <td class="p-3.5"><span class="px-2 py-1 bg-amber-100 text-amber-900 font-mono font-bold rounded text-[11px]">Callback Required</span></td>
                   </tr>
 
@@ -309,14 +309,14 @@ const GOOGLE_PLUMBER_URL = "https://g.page/r/CeEP1k8UUIk_EAE/review";
 
                   <tr class="cursor-pointer hover:bg-slate-50 transition feedback-row" 
                       data-guest="Kieran O'Connor • W4" 
-                      data-rating="1–3★ Snag Reported" 
-                      data-route="Kept Private -> Sent to Office" 
+                      data-rating="1–3★ Issue Reported" 
+                      data-route="Directed to Office -> Priority Action" 
                       data-contact="07911 123456" 
                       data-time="42 mins ago • Emergency Leak" 
                       data-notes="Engineer arrived 35 minutes past the afternoon window. Office phoned customer to apologise; resolved without a negative public review.">
                     <td class="p-3.5 font-bold text-[#0F172A] guest-name-cell">Kieran O'Connor • W4</td>
-                    <td class="p-3.5 font-semibold text-amber-700">1–3★ Snag</td>
-                    <td class="p-3.5 text-slate-600">Blocked from Google</td>
+                    <td class="p-3.5 font-semibold text-amber-700">1–3★ Issue</td>
+                    <td class="p-3.5 text-slate-600">Directed to Office</td>
                     <td class="p-3.5"><span class="px-2 py-1 bg-slate-200 text-slate-700 font-mono font-bold rounded text-[11px]">Sorted by Office</span></td>
                   </tr>
                 </tbody>
@@ -336,7 +336,7 @@ const GOOGLE_PLUMBER_URL = "https://g.page/r/CeEP1k8UUIk_EAE/review";
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
                 <div class="bg-white p-3 rounded border border-slate-200">
                   <span class="font-mono text-[10px] uppercase text-slate-500 block">Routing Outcome</span>
-                  <strong id="inspect-route" class="text-amber-800 font-bold">1–3★ Snag Reported • Kept Private</strong>
+                  <strong id="inspect-route" class="text-amber-800 font-bold">1–3★ Issue Reported • Directed to Office</strong>
                 </div>
                 <div class="bg-white p-3 rounded border border-slate-200">
                   <span class="font-mono text-[10px] uppercase text-slate-500 block">Homeowner Contact Details</span>
@@ -345,7 +345,7 @@ const GOOGLE_PLUMBER_URL = "https://g.page/r/CeEP1k8UUIk_EAE/review";
               </div>
 
               <div class="bg-white p-3.5 rounded border border-slate-200 text-xs">
-                <span class="font-mono text-[10px] uppercase text-slate-500 block mb-1">Customer Note (Sent Privately to Office — Not on Google)</span>
+                <span class="font-mono text-[10px] uppercase text-slate-500 block mb-1">Customer Note (Routed Directly to Office Dispatch)</span>
                 <p id="inspect-notes" class="text-slate-800 leading-relaxed font-medium">
                   Boiler pressure dropped back down to 0.5 bar two hours after engineer left. Needs quick callback to check expansion vessel.
                 </p>
@@ -451,7 +451,7 @@ const GOOGLE_PLUMBER_URL = "https://g.page/r/CeEP1k8UUIk_EAE/review";
     stepCompleted?.classList.add('hidden');
   });
 
-  // 4-5 Star Clicks -> Smooth 2-Step Transition (Does not instantly navigate away, shows review link button)
+  // 4-5 Star Clicks -> Show Review Link Button
   document.querySelectorAll('.rating-btn').forEach((btn) => {
     btn.addEventListener('click', () => {
       const stars = Number(btn.dataset.rating || 5);
@@ -489,7 +489,7 @@ const GOOGLE_PLUMBER_URL = "https://g.page/r/CeEP1k8UUIk_EAE/review";
     });
   });
 
-  // 1-3 Star Form Submit -> Send to Google Apps Script + Log Private Alert Row
+  // 1-3 Star Form Submit -> Google Apps Script + Private Dispatch Alert Row
   const privateForm = document.getElementById('private-feedback-form');
   const submitBtn = document.getElementById('feedback-submit-btn');
 
@@ -530,16 +530,16 @@ const GOOGLE_PLUMBER_URL = "https://g.page/r/CeEP1k8UUIk_EAE/review";
     const newRow = document.createElement('tr');
     newRow.className = 'cursor-pointer hover:bg-slate-50 transition feedback-row';
     newRow.dataset.guest = contactVal;
-    newRow.dataset.rating = '1–3★ Snag Reported';
-    newRow.dataset.route = 'Kept Private -> Sent to Office';
+    newRow.dataset.rating = '1–3★ Issue Reported';
+    newRow.dataset.route = 'Directed to Office -> Priority Action';
     newRow.dataset.contact = contactVal;
-    newRow.dataset.time = 'Just now • Live Snag Alert';
+    newRow.dataset.time = 'Just now • Live Office Alert';
     newRow.dataset.notes = notesVal;
 
     newRow.innerHTML = `
       <td class="p-3.5 font-bold text-[#2563EB] underline guest-name-cell">${contactVal}</td>
-      <td class="p-3.5 font-semibold text-amber-700">1–3★ Snag</td>
-      <td class="p-3.5 text-slate-600">Blocked from Google</td>
+      <td class="p-3.5 font-semibold text-amber-700">1–3★ Issue</td>
+      <td class="p-3.5 text-slate-600">Directed to Office</td>
       <td class="p-3.5"><span class="px-2 py-1 bg-amber-100 text-amber-900 font-mono font-bold rounded text-[11px]">New Office Alert</span></td>
     `;
 
@@ -547,7 +547,7 @@ const GOOGLE_PLUMBER_URL = "https://g.page/r/CeEP1k8UUIk_EAE/review";
     tableBody?.prepend(newRow);
     newRow.click();
 
-    if (countBadge) countBadge.innerText = '● Snag Intercepted Privately';
+    if (countBadge) countBadge.innerText = '● Issue Routed to Dispatch';
 
     stepPrivate?.classList.add('hidden');
     stepCompleted?.classList.remove('hidden');
