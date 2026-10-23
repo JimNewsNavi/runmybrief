@@ -1,0 +1,716 @@
+---
+// src/pages/index.astro
+import Layout from '../layouts/Layout.astro';
+import '@fontsource/oswald/600.css';
+import '@fontsource/oswald/700.css';
+import '@fontsource/jetbrains-mono/400.css';
+import '@fontsource/jetbrains-mono/500.css';
+import '@fontsource/jetbrains-mono/700.css';
+
+const GOOGLE_PLUMBER_URL = "https://g.page/r/CeEP1k8UUIk_EAE/review";
+---
+
+<style is:global>
+  :root {
+    --font-display: 'Oswald', Impact, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+  .editorial-title {
+    font-family: var(--font-display) !important;
+    text-transform: uppercase;
+    line-height: 0.98;
+    letter-spacing: -0.02em;
+  }
+  @media (min-width: 1024px) {
+    .editorial-title {
+      line-height: 0.85;
+      letter-spacing: -0.03em;
+    }
+  }
+  .tech-mono {
+    font-family: var(--font-mono) !important;
+  }
+</style>
+
+<Layout title="Run My Brief // Trade Reputation & Dispatch Engine">
+
+  <!-- =====================================================================
+       SECTION 01: STARK INDUSTRIAL HERO (OVERLAPPING TEXT + TRADE TELEMETRY)
+  ====================================================================== -->
+  <section class="relative bg-[#050505] text-[#FAFAFA] min-h-[90vh] flex flex-col justify-between overflow-hidden border-b border-neutral-800 select-none">
+    
+    <!-- Top Corner Micro-Metadata -->
+    <div class="relative z-30 grid grid-cols-12 px-6 pt-6 tech-mono text-[10px] tracking-[0.2em] uppercase text-neutral-400">
+      <div class="col-span-6 sm:col-span-3">
+        <span class="text-[#FF5500] block font-bold">// DISPATCH_01</span>
+        <span>REPUTATION FIREWALL</span>
+      </div>
+      <div class="hidden sm:block sm:col-span-3">
+        <span class="text-[#FAFAFA] block">4–5 STAR TAPS</span>
+        <span>DIRECT TO GOOGLE LSA</span>
+      </div>
+      <div class="hidden sm:block sm:col-span-3">
+        <span class="text-[#FAFAFA] block">1–3 STAR TAPS</span>
+        <span>PRIVATE SNAG INTERCEPT</span>
+      </div>
+      <div class="col-span-6 sm:col-span-3 text-right">
+        <a href="#sandbox" class="inline-block bg-[#FF5500] text-[#050505] font-bold px-3 py-1.5 hover:bg-white transition-colors">
+          LAUNCH WORKBENCH ↗
+        </a>
+      </div>
+    </div>
+
+    <!-- Centerpiece: Giant Typography Colliding With High-Contrast Cutout Image -->
+    <div class="relative my-auto py-16 lg:py-24 px-4 sm:px-8">
+      
+      <!-- Background Giant Watermark Word -->
+      <div class="editorial-title text-[23vw] font-bold text-neutral-900/50 leading-none absolute -top-8 left-0 right-0 text-center pointer-events-none z-0">
+        DISPATCH
+      </div>
+
+      <div class="max-w-[1600px] mx-auto grid grid-cols-12 items-center relative z-10">
+        
+        <!-- Left Overlapping Headline -->
+        <div class="col-span-12 lg:col-span-5 z-20 pointer-events-none">
+          <p class="tech-mono text-[11px] tracking-[0.25em] text-[#FF5500] uppercase mb-4">
+            [ GOOGLE LOCAL SERVICES RATING PROTECTION ]
+          </p>
+          <h1 class="editorial-title text-[14vw] sm:text-[10vw] lg:text-[7.2rem] font-bold text-[#FAFAFA] drop-shadow-[0_10px_20px_rgba(0,0,0,0.9)]">
+            BANK THE<br />
+            5-STARS. KILL<br />
+            <span class="text-[#FF5500]">THE PUBLIC RANTS.</span>
+          </h1>
+        </div>
+
+        <!-- Center/Right Editorial Image Frame -->
+        <div class="col-span-12 lg:col-span-5 lg:-ml-12 my-8 lg:my-0 relative z-10">
+          <div class="relative aspect-[4/5] max-h-[600px] w-full bg-neutral-900 overflow-hidden border border-neutral-800">
+            <img 
+              src="https://cdn.pixabay.com/photo/2015/07/11/14/53/plumbing-840835_1280.jpg" 
+              alt="Heating Engineer Inspection" 
+              class="w-full h-full object-cover object-center grayscale contrast-150 brightness-75 scale-105 hover:scale-100 transition-transform duration-700"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-black/40"></div>
+            
+            <!-- Editorial Stamp Block on Image -->
+            <div class="absolute top-6 right-0 bg-[#00FF66] text-[#050505] tech-mono text-[10px] font-bold uppercase tracking-widest px-4 py-2">
+              SUB-10S DRIVEWAY HANDOVER
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Offset Colliding Headline & Copy -->
+        <div class="col-span-12 lg:col-span-4 lg:-ml-20 lg:mt-44 z-20 flex flex-col items-start lg:items-end lg:text-right">
+          <h2 class="editorial-title text-[11vw] sm:text-[8vw] lg:text-[5.6rem] font-bold text-white mix-blend-difference mb-6">
+            CALLOUT TO<br />
+            <span class="text-neutral-400">CALLBACK.</span>
+          </h2>
+          <p class="tech-mono text-xs text-neutral-300 max-w-md leading-relaxed bg-[#050505]/95 p-5 border-l-2 lg:border-l-0 lg:border-r-2 border-[#FF5500]">
+            One 1-star review over a dropped boiler pressure gauge or a late part costs thousands in lost emergency callouts. Handover takes 10 seconds via SMS link or invoice QR: 4–5★ taps go straight to Google; 1–3★ taps alert your office dispatch privately before a rant goes live.
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Bottom Credentials Bar -->
+    <div class="relative z-30 bg-[#FF5500] text-[#050505] py-2.5 px-6 tech-mono text-[11px] font-bold uppercase tracking-[0.2em] flex flex-wrap justify-between items-center">
+      <span>// BUILT FOR PLUMBING, HEATING &amp; EMERGENCY TRADE FLEETS</span>
+      <span class="hidden xl:inline">SMS / WHATSAPP / INVOICE QR // 100% GOOGLE PLATFORM COMPLIANT FALLBACK</span>
+    </div>
+
+  </section>
+
+  <!-- =====================================================================
+       SECTION 02: STARK BONE-WHITE EDITORIAL INVERSION
+       3-Step Post-Callout Architecture
+  ====================================================================== -->
+  <section class="bg-[#F4F4F0] text-[#080808] py-20 lg:py-28 px-6 border-b border-neutral-300">
+    <div class="max-w-[1600px] mx-auto">
+      
+      <!-- Asymmetric Editorial Header -->
+      <div class="grid grid-cols-12 gap-8 pb-14 border-b-2 border-[#080808] items-end">
+        <div class="col-span-12 lg:col-span-3">
+          <span class="tech-mono text-xs font-bold uppercase tracking-[0.2em] block text-neutral-500 mb-2">// POST-CALLOUT PROTOCOL</span>
+          <div class="editorial-title text-[5.5rem] lg:text-[7.5rem] font-bold leading-none text-[#080808]">
+            01—03
+          </div>
+        </div>
+        <div class="col-span-12 lg:col-span-6">
+          <h2 class="editorial-title text-5xl sm:text-7xl lg:text-[5.2rem] font-bold text-[#080808]">
+            PROTECT THE RANKING.<br />
+            FIX THE SNAG.
+          </h2>
+        </div>
+        <div class="col-span-12 lg:col-span-3 tech-mono text-xs leading-relaxed text-neutral-700">
+          Google Local Services Ads rank firms by review velocity and rating score. Our two-way switchboard separates happy customers from unresolved job snags in real time.
+        </div>
+      </div>
+
+      <!-- 3-Part Editorial Spread -->
+      <div class="divide-y-2 divide-[#080808]">
+        
+        <!-- Spread 01: Driveway Dispatch -->
+        <div class="grid grid-cols-12 py-10 lg:py-14 items-baseline gap-6">
+          <div class="col-span-4 sm:col-span-2 editorial-title text-6xl sm:text-8xl font-bold text-[#080808]">
+            01<span class="text-[#FF5500]">.</span>
+          </div>
+          <div class="col-span-8 sm:col-span-4">
+            <span class="tech-mono text-[10px] font-bold uppercase tracking-[0.2em] bg-[#080808] text-[#F4F4F0] px-2 py-1">STEP 01 // DRIVEWAY HANDOVER</span>
+            <h3 class="editorial-title text-4xl sm:text-5xl font-bold mt-4">
+              SMS LINK OR<br />INVOICE QR SCAN
+            </h3>
+          </div>
+          <div class="col-span-12 sm:col-span-6 tech-mono text-xs sm:text-sm text-neutral-800 leading-relaxed max-w-xl">
+            As soon as the engineer marks the job complete, the homeowner gets a branded check-in card via SMS, WhatsApp, or invoice QR code. Zero app downloads or logins required—just a single tap while the van is still in the driveway.
+          </div>
+        </div>
+
+        <!-- Spread 02: 4-5 Star Direct Route -->
+        <div class="grid grid-cols-12 py-10 lg:py-14 items-baseline gap-6">
+          <div class="col-span-4 sm:col-span-2 sm:col-start-3 editorial-title text-6xl sm:text-8xl font-bold text-[#080808]">
+            02<span class="text-[#00AA44]">+</span>
+          </div>
+          <div class="col-span-8 sm:col-span-4">
+            <span class="tech-mono text-[10px] font-bold uppercase tracking-[0.2em] bg-[#00FF66] text-[#080808] px-2 py-1">IF HAPPY // 4 &amp; 5 STAR TAPS</span>
+            <h3 class="editorial-title text-4xl sm:text-5xl font-bold mt-4">
+              STRAIGHT TO GOOGLE<br />LOCAL SERVICES
+            </h3>
+          </div>
+          <div class="col-span-12 sm:col-span-4 tech-mono text-xs sm:text-sm text-neutral-800 leading-relaxed">
+            When a homeowner taps 4★ or 5★, we skip bloated surveys and open your exact Google Local Services review box immediately. Frictionless routing turns routine boiler services into compounding 5-star public proof.
+          </div>
+        </div>
+
+        <!-- Spread 03: 1-3 Star Snag Intercept -->
+        <div class="grid grid-cols-12 py-10 lg:py-14 items-baseline gap-6">
+          <div class="col-span-4 sm:col-span-2 editorial-title text-6xl sm:text-8xl font-bold text-[#080808]">
+            03<span class="text-[#FF5500]">!</span>
+          </div>
+          <div class="col-span-8 sm:col-span-4">
+            <span class="tech-mono text-[10px] font-bold uppercase tracking-[0.2em] bg-[#FF5500] text-[#080808] px-2 py-1">IF ISSUE // 1 TO 3 STAR TAPS</span>
+            <h3 class="editorial-title text-4xl sm:text-5xl font-bold mt-4">
+              PRIVATE OFFICE<br />CALLBACK ALERT
+            </h3>
+          </div>
+          <div class="col-span-12 sm:col-span-6 tech-mono text-xs sm:text-sm text-neutral-800 leading-relaxed max-w-xl">
+            If the pressure drops or a radiator stays cold, a 1–3★ tap opens a direct-to-dispatch snag form instead. Your office manager gets an instant webhook alert to phone the customer and sort it out privately—complete with a 100% Google-compliant public fallback link.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 03: TWO-SIDED LIVE DISPATCH WORKBENCH
+  ====================================================================== -->
+  <section id="sandbox" class="bg-[#050505] text-[#FAFAFA] py-20 lg:py-28 px-4 sm:px-8">
+    <div class="max-w-[1600px] mx-auto">
+      
+      <!-- Giant Section Title Banner -->
+      <div class="grid grid-cols-12 gap-6 pb-12 border-b border-neutral-800 items-end">
+        <div class="col-span-12 lg:col-span-8">
+          <span class="tech-mono text-xs text-[#FF5500] uppercase tracking-[0.25em] block mb-3">
+            // TWO-SIDED LIVE SYSTEM TEST
+          </span>
+          <h2 class="editorial-title text-6xl sm:text-8xl font-bold text-[#FAFAFA]">
+            THE DISPATCH WORKBENCH.
+          </h2>
+        </div>
+        <div class="col-span-12 lg:col-span-4 tech-mono text-xs text-neutral-400 lg:text-right">
+          LEFT: HOMEOWNER HANDOVER TERMINAL.<br />
+          RIGHT: LIVE OFFICE DISPATCH &amp; SNAG LOG.
+        </div>
+      </div>
+
+      <!-- Asymmetric 5 / 7 Split Workbench -->
+      <div class="grid grid-cols-12 gap-8 pt-12 items-start">
+        
+        <!-- LEFT 5 COLS: HOMEOWNER MOBILE HANDOVER UNIT -->
+        <div class="col-span-12 lg:col-span-5 bg-[#0B0C0E] border-2 border-neutral-800">
+          
+          <!-- Stark White Header Bar -->
+          <div class="bg-[#FAFAFA] text-[#050505] p-4 flex flex-wrap items-center justify-between gap-2">
+            <div>
+              <span class="tech-mono text-[9px] uppercase tracking-[0.2em] block text-neutral-600 font-bold">STAGE 01 // CUSTOMER DEVICE</span>
+              <h3 class="editorial-title text-2xl font-bold tracking-tight">HOMEOWNER HANDOVER VIEW</h3>
+            </div>
+            <button type="button" id="btn-reset-guest-card" class="bg-[#050505] hover:bg-[#FF5500] text-[#FAFAFA] hover:text-[#050505] tech-mono text-[10px] font-bold uppercase px-3 py-1.5 transition-colors cursor-pointer">
+              [ RESET VIEW ]
+            </button>
+          </div>
+
+          <!-- Industrial Handset Viewport -->
+          <div class="p-5 sm:p-6 bg-[#050505]">
+            <div class="border-2 border-neutral-800 bg-[#F4F4F0] text-[#050505]">
+              
+              <!-- Plumber Service Header Banner -->
+              <div class="relative h-32 bg-[#050505] overflow-hidden border-b-2 border-[#050505]">
+                <img 
+                  src="https://cdn.pixabay.com/photo/2015/07/11/14/53/plumbing-840835_1280.jpg" 
+                  alt="Plumbing engineer service banner" 
+                  class="w-full h-full object-cover grayscale contrast-125 opacity-60"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-black/40"></div>
+                <div class="absolute bottom-3 left-4 right-4 flex items-center justify-between tech-mono text-[10px]">
+                  <span class="bg-[#00FF66] text-[#050505] font-bold px-2 py-0.5 uppercase tracking-wider">GAS SAFE REGISTERED</span>
+                  <span class="text-[#FAFAFA] uppercase tracking-widest">VERIFIED CALLOUT</span>
+                </div>
+              </div>
+
+              <div class="p-5 sm:p-6">
+                <!-- Company Identity -->
+                <div class="flex items-start gap-4 border-b-2 border-[#050505] pb-5 mb-5">
+                  <div id="brand-initial" class="w-12 h-12 bg-[#050505] text-[#00FF66] editorial-title text-2xl font-bold flex items-center justify-center shrink-0">
+                    LP
+                  </div>
+                  <div>
+                    <h4 id="business-name" class="editorial-title text-2xl font-bold text-[#050505] tracking-normal">London Plumbing Firm</h4>
+                    <p id="greeting-text" class="tech-mono text-[11px] text-neutral-700 mt-1 leading-relaxed">
+                      Thanks for choosing us for your plumbing &amp; heating work today.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- STEP 1: RATING OPTIONS -->
+                <div id="step-rating" class="space-y-3">
+                  <p class="tech-mono text-[10px] font-bold text-neutral-600 uppercase tracking-widest mb-3">
+                    // SELECT JOB OUTCOME TO TEST ROUTING:
+                  </p>
+                  
+                  <button type="button" data-rating="5" class="rating-btn w-full flex items-center justify-between p-4 border-2 border-[#050505] bg-white hover:bg-[#050505] hover:text-[#FAFAFA] transition-colors text-left cursor-pointer group">
+                    <div>
+                      <div class="editorial-title text-xl font-bold group-hover:text-[#00FF66]">5 STAR — SPOT ON / FIRST CLASS</div>
+                      <div class="tech-mono text-[11px] text-neutral-600 group-hover:text-neutral-300 mt-0.5">On time, tidy, and job sorted properly</div>
+                    </div>
+                    <span class="px-2.5 py-1 bg-[#00FF66] text-[#050505] tech-mono text-xs font-bold uppercase shrink-0">5★</span>
+                  </button>
+
+                  <button type="button" data-rating="4" class="rating-btn w-full flex items-center justify-between p-4 border-2 border-[#050505] bg-white hover:bg-[#050505] hover:text-[#FAFAFA] transition-colors text-left cursor-pointer group">
+                    <div>
+                      <div class="editorial-title text-xl font-bold group-hover:text-[#00FF66]">4 STAR — GOOD JOB OVERALL</div>
+                      <div class="tech-mono text-[11px] text-neutral-600 group-hover:text-neutral-300 mt-0.5">Happy with the work carried out</div>
+                    </div>
+                    <span class="px-2.5 py-1 bg-[#050505] text-[#FAFAFA] group-hover:bg-[#00FF66] group-hover:text-[#050505] tech-mono text-xs font-bold uppercase shrink-0">4★</span>
+                  </button>
+
+                  <button type="button" data-rating="3" class="rating-btn w-full flex items-center justify-between p-4 border-2 border-[#050505] bg-white hover:bg-[#FF5500] hover:border-[#FF5500] transition-colors text-left cursor-pointer group">
+                    <div>
+                      <div class="editorial-title text-xl font-bold text-[#050505]">1–3 STAR — SOMETHING NEEDS SORTING</div>
+                      <div class="tech-mono text-[11px] text-neutral-600 group-hover:text-[#050505] mt-0.5">Request a priority callback from the office</div>
+                    </div>
+                    <span class="px-2.5 py-1 bg-[#FF5500] text-[#050505] group-hover:bg-[#050505] group-hover:text-[#FF5500] tech-mono text-[10px] font-bold uppercase shrink-0">SNAG</span>
+                  </button>
+                </div>
+
+                <!-- STEP 2: GOOGLE REDIRECT CARD (4-5 STARS) -->
+                <div id="step-redirecting" class="hidden py-6 space-y-4">
+                  <div class="inline-block bg-[#00FF66] text-[#050505] tech-mono text-[10px] font-bold px-2.5 py-1 uppercase tracking-widest">
+                    // ROUTE: PUBLIC GOOGLE REVIEW
+                  </div>
+                  <h4 class="editorial-title text-3xl font-bold text-[#050505]">THANK YOU FOR THE FEEDBACK.</h4>
+                  <p class="tech-mono text-xs text-neutral-700 leading-relaxed">
+                    Tap below to post your rating directly on our Google Local Services profile. Takes 15 seconds.
+                  </p>
+                  <div class="pt-2">
+                    <a id="manual-redirect-btn" href={GOOGLE_PLUMBER_URL} target="_blank" rel="noopener noreferrer" class="block w-full text-center py-4 bg-[#050505] hover:bg-[#00FF66] text-[#FAFAFA] hover:text-[#050505] tech-mono text-xs font-bold uppercase tracking-widest transition-colors">
+                      [ OPEN GOOGLE REVIEWS NOW &nearr; ]
+                    </a>
+                  </div>
+                </div>
+
+                <!-- STEP 3: PRIVATE ISSUE / CALLBACK FORM (1-3 STARS) -->
+                <div id="step-private-feedback" class="hidden space-y-4">
+                  <div class="bg-[#FF5500] text-[#050505] p-3.5 border-2 border-[#050505]">
+                    <h4 class="tech-mono text-[10px] font-bold uppercase tracking-widest">// DIRECT OFFICE INTERCEPT</h4>
+                    <p class="tech-mono text-xs font-bold mt-1">
+                      Sent straight to our dispatch manager's phone so we can put things right today.
+                    </p>
+                  </div>
+
+                  <form id="private-feedback-form" class="space-y-3 tech-mono text-xs">
+                    <div>
+                      <label class="block text-[10px] font-bold text-[#050505] uppercase tracking-wider mb-1">WHAT NEEDS ATTENTION?</label>
+                      <textarea id="feedback-notes" required rows="3" class="w-full border-2 border-[#050505] bg-white p-3 text-xs text-[#050505] focus:bg-[#FAFAFA] outline-none" placeholder="e.g. Radiator still cold, boiler pressure dropped, or timing issue..."></textarea>
+                    </div>
+                    <div>
+                      <label class="block text-[10px] font-bold text-[#050505] uppercase tracking-wider mb-1">NAME, POSTCODE &amp; PHONE</label>
+                      <input type="text" id="feedback-contact" required class="w-full border-2 border-[#050505] bg-white p-3 text-xs text-[#050505] focus:bg-[#FAFAFA] outline-none" placeholder="e.g. Mr. Davies • SW14 • 07700 900123" />
+                    </div>
+                    <button type="submit" id="feedback-submit-btn" class="w-full py-4 bg-[#050505] hover:bg-[#FF5500] text-[#FAFAFA] hover:text-[#050505] font-bold text-xs uppercase tracking-widest transition-colors cursor-pointer">
+                      [ ALERT OFFICE DISPATCH NOW &rarr; ]
+                    </button>
+                  </form>
+
+                  <!-- Compliant Public Review Fallback -->
+                  <div class="text-center pt-3 border-t border-neutral-300">
+                    <a id="fallback-google-link" href={GOOGLE_PLUMBER_URL} target="_blank" rel="noopener noreferrer" class="tech-mono text-[10px] text-neutral-600 underline hover:text-[#050505] uppercase">
+                      Prefer to post publicly on Google instead? Click here
+                    </a>
+                  </div>
+                </div>
+
+                <!-- STEP 4: COMPLETION CONFIRMATION -->
+                <div id="step-completed" class="hidden py-6 space-y-3">
+                  <div class="inline-block bg-[#050505] text-[#00FF66] tech-mono text-[10px] font-bold px-2.5 py-1 uppercase tracking-widest">
+                    // STATUS: DISPATCH ALERTED
+                  </div>
+                  <h4 class="editorial-title text-3xl font-bold text-[#050505]">PRIORITY TICKET LOGGED.</h4>
+                  <p class="tech-mono text-xs text-neutral-700 leading-relaxed">
+                    Our senior engineer has been alerted with your job notes and will call you shortly to sort this out.
+                  </p>
+                </div>
+
+                <div class="mt-6 pt-3 border-t-2 border-[#050505] flex items-center justify-between tech-mono text-[9px] font-bold uppercase tracking-widest text-neutral-600">
+                  <span>LONDON PLUMBING FIRM</span>
+                  <span>RUN MY BRIEF ENGINE</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT 7 COLS: OFFICE DISPATCH COMMAND CENTRE -->
+        <div class="col-span-12 lg:col-span-7 space-y-8">
+          
+          <div class="border-2 border-neutral-800 bg-[#0B0C0E]">
+            <!-- Scoreboard Header -->
+            <div class="bg-[#050505] border-b-2 border-neutral-800 p-5 flex flex-wrap items-center justify-between gap-2">
+              <div>
+                <span class="tech-mono text-[10px] text-[#FF5500] uppercase tracking-[0.2em] block">STAGE 02 // LIVE TELEMETRY</span>
+                <h3 class="editorial-title text-3xl font-bold text-[#FAFAFA] mt-1">OFFICE DISPATCH &amp; SNAG LOG</h3>
+              </div>
+              <span id="entry-count" class="bg-[#00FF66] text-[#050505] tech-mono text-xs font-bold px-3 py-1.5 uppercase">
+                WEBHOOK ACTIVE
+              </span>
+            </div>
+
+            <!-- Industrial KPI Telemetry Bar -->
+            <div class="grid grid-cols-3 divide-x-2 divide-neutral-800 border-b-2 border-neutral-800 bg-[#050505]">
+              <div class="p-4 sm:p-5">
+                <span class="tech-mono text-[9px] uppercase tracking-widest text-neutral-400 block">SENT TO GOOGLE (4–5★)</span>
+                <span id="kpi-public" class="editorial-title text-3xl sm:text-4xl font-bold text-[#00FF66] block mt-1">142 JOBS</span>
+              </div>
+              <div class="p-4 sm:p-5">
+                <span class="tech-mono text-[9px] uppercase tracking-widest text-neutral-400 block">SNAGS INTERCEPTED</span>
+                <span id="kpi-intercepted" class="editorial-title text-3xl sm:text-4xl font-bold text-[#FF5500] block mt-1">19 JOBS</span>
+              </div>
+              <div class="p-4 sm:p-5">
+                <span class="tech-mono text-[9px] uppercase tracking-widest text-neutral-400 block">1-STAR RANTS PREVENTED</span>
+                <span class="editorial-title text-3xl sm:text-4xl font-bold text-[#FAFAFA] block mt-1">88.2%</span>
+              </div>
+            </div>
+
+            <!-- Dispatch Table -->
+            <div class="overflow-x-auto">
+              <table class="w-full text-left tech-mono text-xs border-collapse">
+                <thead>
+                  <tr class="bg-[#FAFAFA] text-[#050505] font-bold uppercase text-[10px] tracking-widest">
+                    <th class="py-3 px-4 border-r border-neutral-300">HOMEOWNER / POSTCODE</th>
+                    <th class="py-3 px-4 border-r border-neutral-300">TAP</th>
+                    <th class="py-3 px-4 border-r border-neutral-300">ROUTE</th>
+                    <th class="py-3 px-4 text-right">STATUS</th>
+                  </tr>
+                </thead>
+                <tbody id="dashboard-rows" class="divide-y divide-neutral-800">
+                  <tr class="cursor-pointer hover:bg-neutral-900 transition-colors feedback-row bg-[#FF5500]/15" 
+                      data-guest="Mr. Arthur Pendelton • SW14" 
+                      data-rating="1–3★ Issue Reported" 
+                      data-route="Directed to Office -> Priority Action" 
+                      data-contact="arthur.p@outlook.com • 07700 900412" 
+                      data-time="Just now • Boiler Service" 
+                      data-notes="Boiler pressure dropped back down to 0.5 bar two hours after engineer left. Needs quick callback to check expansion vessel.">
+                    <td class="py-4 px-4 font-bold text-[#FF5500] border-r border-neutral-800 guest-name-cell">Mr. Arthur Pendelton • SW14</td>
+                    <td class="py-4 px-4 text-[#FF5500] font-bold border-r border-neutral-800">[1–3★ SNAG]</td>
+                    <td class="py-4 px-4 text-neutral-300 border-r border-neutral-800">OFFICE INTERCEPT</td>
+                    <td class="py-4 px-4 text-right"><span class="bg-[#FF5500] text-[#050505] font-bold px-2 py-1 text-[10px] uppercase">CALLBACK REQ</span></td>
+                  </tr>
+
+                  <tr class="cursor-pointer hover:bg-neutral-900 transition-colors feedback-row" 
+                      data-guest="Sarah Jenkins • N1" 
+                      data-rating="5★ Spot On" 
+                      data-route="Direct Redirect -> Google Local Services" 
+                      data-contact="Public Google Reviewer" 
+                      data-time="18 mins ago • Unvented Cylinder" 
+                      data-notes="Homeowner tapped 5★ on the post-job SMS card and was presented with the direct Google Local Services review link.">
+                    <td class="py-4 px-4 font-bold text-[#FAFAFA] border-r border-neutral-800 guest-name-cell">Sarah Jenkins • N1</td>
+                    <td class="py-4 px-4 text-[#00FF66] font-bold border-r border-neutral-800">[5★ SPOT ON]</td>
+                    <td class="py-4 px-4 text-neutral-300 border-r border-neutral-800">GOOGLE LSA</td>
+                    <td class="py-4 px-4 text-right"><span class="bg-[#00FF66] text-[#050505] font-bold px-2 py-1 text-[10px] uppercase">LINK SENT</span></td>
+                  </tr>
+
+                  <tr class="cursor-pointer hover:bg-neutral-900 transition-colors feedback-row" 
+                      data-guest="Kieran O'Connor • W4" 
+                      data-rating="1–3★ Issue Reported" 
+                      data-route="Directed to Office -> Priority Action" 
+                      data-contact="07911 123456" 
+                      data-time="42 mins ago • Emergency Leak" 
+                      data-notes="Engineer arrived 35 minutes past the afternoon window. Office phoned customer to apologise; resolved without a negative public review.">
+                    <td class="py-4 px-4 font-bold text-[#FAFAFA] border-r border-neutral-800 guest-name-cell">Kieran O'Connor • W4</td>
+                    <td class="py-4 px-4 text-[#FF5500] font-bold border-r border-neutral-800">[1–3★ SNAG]</td>
+                    <td class="py-4 px-4 text-neutral-300 border-r border-neutral-800">OFFICE INTERCEPT</td>
+                    <td class="py-4 px-4 text-right"><span class="bg-neutral-800 text-neutral-300 font-bold px-2 py-1 text-[10px] uppercase">RESOLVED</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- STAGE 03: SELECTED JOB TICKET INSPECTOR -->
+          <div id="inspector-panel" class="grid grid-cols-12 border-2 border-neutral-800 bg-[#050505]">
+            
+            <!-- Left Stark Bone-White Ticket Meta -->
+            <div class="col-span-12 sm:col-span-5 bg-[#F4F4F0] text-[#050505] p-6 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between gap-2">
+                  <span class="tech-mono text-[10px] font-bold uppercase tracking-widest text-neutral-600 block">03. DISPATCH TICKET</span>
+                  <span id="inspect-time" class="bg-[#050505] text-[#FAFAFA] tech-mono text-[9px] font-bold px-2 py-0.5 uppercase">Just now • Boiler Service</span>
+                </div>
+                <h4 id="inspect-guest" class="editorial-title text-3xl font-bold text-[#050505] mt-3 mb-5">Mr. Arthur Pendelton • SW14</h4>
+                
+                <div class="space-y-4 tech-mono text-xs border-t-2 border-[#050505] pt-4">
+                  <div>
+                    <span class="text-[9px] uppercase text-neutral-500 block">ROUTING OUTCOME</span>
+                    <strong id="inspect-route" class="font-bold text-[#FF5500] bg-[#050505] px-2 py-1 inline-block mt-1 text-[11px]">
+                      1–3★ Issue Reported • Directed to Office
+                    </strong>
+                  </div>
+                  <div>
+                    <span class="text-[9px] uppercase text-neutral-500 block">HOMEOWNER CONTACT DETAILS</span>
+                    <strong id="inspect-contact" class="font-bold text-[#050505] block mt-0.5">
+                      arthur.p@outlook.com • 07700 900412
+                    </strong>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Dark Customer Snag / Review Feed -->
+            <div class="col-span-12 sm:col-span-7 p-6 flex flex-col justify-between bg-[#0B0C0E]">
+              <div class="tech-mono text-xs space-y-3">
+                <div class="flex items-center justify-between border-b border-neutral-800 pb-2">
+                  <span class="text-[10px] text-[#FF5500] uppercase tracking-widest font-bold">// FIELD LOG &amp; CUSTOMER TRANSCRIPT</span>
+                  <span class="text-[10px] text-neutral-500 uppercase">PRIVATE SILO</span>
+                </div>
+                <p id="inspect-notes" class="text-[#FAFAFA] leading-relaxed text-xs bg-[#050505] p-4 border border-neutral-800">
+                  Boiler pressure dropped back down to 0.5 bar two hours after engineer left. Needs quick callback to check expansion vessel.
+                </p>
+              </div>
+
+              <div class="mt-6 pt-4 border-t border-neutral-800 flex items-center justify-between tech-mono text-[10px] text-neutral-400">
+                <span>PUBLIC GOOGLE EXPOSURE: <strong class="text-[#00FF66]">PREVENTED</strong></span>
+                <span>SLA: &lt; 15 MIN CALLBACK</span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</Layout>
+
+<script define:vars={{ GOOGLE_PLUMBER_URL }}>
+  const CLIENTS = {
+    plumbers: {
+      name: "London Plumbing Firm",
+      initial: "LP",
+      googleReviewUrl: GOOGLE_PLUMBER_URL
+    }
+  };
+
+  const DEFAULT_CONFIG = CLIENTS.plumbers;
+  const urlParams = new URLSearchParams(window.location.search);
+  const clientId = urlParams.get('client') || 'plumbers';
+  const recipientName = urlParams.get('name');
+  const activeClient = CLIENTS[clientId] || DEFAULT_CONFIG;
+
+  const businessNameEl = document.getElementById('business-name');
+  const greetingTextEl = document.getElementById('greeting-text');
+  const brandInitialEl = document.getElementById('brand-initial');
+  const fallbackLink = document.getElementById('fallback-google-link');
+  const manualRedirectBtn = document.getElementById('manual-redirect-btn');
+
+  if (businessNameEl) businessNameEl.textContent = activeClient.name;
+  if (recipientName && greetingTextEl) {
+    greetingTextEl.textContent = `Hi ${recipientName}, thanks for choosing us for your plumbing & heating work today.`;
+  }
+  if (brandInitialEl) brandInitialEl.textContent = activeClient.initial;
+  if (fallbackLink) fallbackLink.href = activeClient.googleReviewUrl;
+  if (manualRedirectBtn) manualRedirectBtn.href = activeClient.googleReviewUrl;
+
+  const stepRating = document.getElementById('step-rating');
+  const stepRedirecting = document.getElementById('step-redirecting');
+  const stepPrivate = document.getElementById('step-private-feedback');
+  const stepCompleted = document.getElementById('step-completed');
+  const resetBtn = document.getElementById('btn-reset-guest-card');
+
+  const tableBody = document.getElementById('dashboard-rows');
+  const countBadge = document.getElementById('entry-count');
+  const kpiPublic = document.getElementById('kpi-public');
+  const kpiIntercepted = document.getElementById('kpi-intercepted');
+  let publicCount = 142;
+  let interceptedCount = 19;
+
+  const inspectGuest = document.getElementById('inspect-guest');
+  const inspectTime = document.getElementById('inspect-time');
+  const inspectRoute = document.getElementById('inspect-route');
+  const inspectContact = document.getElementById('inspect-contact');
+  const inspectNotes = document.getElementById('inspect-notes');
+
+  function setActiveRowStyling(activeRow) {
+    document.querySelectorAll('.feedback-row').forEach((r) => {
+      r.classList.remove('bg-[#FF5500]/15', 'bg-[#00FF66]/10');
+      const nameCell = r.querySelector('.guest-name-cell');
+      if (nameCell) {
+        nameCell.className = 'py-4 px-4 font-bold text-[#FAFAFA] border-r border-neutral-800 guest-name-cell';
+      }
+    });
+
+    const isIssue = (activeRow.dataset.rating || '').includes('1–3');
+    activeRow.classList.add(isIssue ? 'bg-[#FF5500]/15' : 'bg-[#00FF66]/10');
+    const activeNameCell = activeRow.querySelector('.guest-name-cell');
+    if (activeNameCell) {
+      activeNameCell.className = `py-4 px-4 font-bold ${isIssue ? 'text-[#FF5500]' : 'text-[#00FF66]'} border-r border-neutral-800 guest-name-cell`;
+    }
+  }
+
+  function bindRowClick(row) {
+    row.addEventListener('click', () => {
+      setActiveRowStyling(row);
+
+      if (inspectGuest) inspectGuest.innerText = row.dataset.guest || 'Customer';
+      if (inspectTime) inspectTime.innerText = row.dataset.time || 'Just now';
+      if (inspectRoute) {
+        inspectRoute.innerText = `${row.dataset.rating} • ${row.dataset.route}`;
+        inspectRoute.className = (row.dataset.rating || '').includes('1–3')
+          ? 'font-bold text-[#FF5500] bg-[#050505] px-2 py-1 inline-block mt-1 text-[11px]'
+          : 'font-bold text-[#00FF66] bg-[#050505] px-2 py-1 inline-block mt-1 text-[11px]';
+      }
+      if (inspectContact) inspectContact.innerText = row.dataset.contact || 'Not provided';
+      if (inspectNotes) inspectNotes.innerText = row.dataset.notes || '';
+    });
+  }
+
+  document.querySelectorAll('.feedback-row').forEach((row) => bindRowClick(row));
+
+  resetBtn?.addEventListener('click', () => {
+    stepRating?.classList.remove('hidden');
+    stepRedirecting?.classList.add('hidden');
+    stepPrivate?.classList.add('hidden');
+    stepCompleted?.classList.add('hidden');
+  });
+
+  // 4-5 Star Clicks -> Show Review Link Button
+  document.querySelectorAll('.rating-btn').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const stars = Number(btn.dataset.rating || 5);
+      if (stars >= 4) {
+        stepRating?.classList.add('hidden');
+        stepRedirecting?.classList.remove('hidden');
+
+        publicCount++;
+        if (kpiPublic) kpiPublic.innerText = `${publicCount} JOBS`;
+
+        const newRow = document.createElement('tr');
+        newRow.className = 'cursor-pointer hover:bg-neutral-900 transition-colors feedback-row';
+        newRow.dataset.guest = recipientName ? `${recipientName} (Live SMS Tap)` : 'Homeowner (Live SMS Tap)';
+        newRow.dataset.rating = `${stars}★ Positive`;
+        newRow.dataset.route = 'Direct Redirect -> Google Local Services';
+        newRow.dataset.contact = 'Routed to Public Google Page';
+        newRow.dataset.time = 'Just now • Live Test';
+        newRow.dataset.notes = `Homeowner clicked ${stars}★ on the mobile check-in card and was presented with the Google Local Services review link button.`;
+
+        newRow.innerHTML = `
+          <td class="py-4 px-4 font-bold text-[#00FF66] border-r border-neutral-800 guest-name-cell">${newRow.dataset.guest}</td>
+          <td class="py-4 px-4 text-[#00FF66] font-bold border-r border-neutral-800">[${stars}★ SPOT ON]</td>
+          <td class="py-4 px-4 text-neutral-300 border-r border-neutral-800">GOOGLE LSA</td>
+          <td class="py-4 px-4 text-right"><span class="bg-[#00FF66] text-[#050505] font-bold px-2 py-1 text-[10px] uppercase">LINK READY</span></td>
+        `;
+
+        bindRowClick(newRow);
+        tableBody?.prepend(newRow);
+        newRow.click();
+        if (countBadge) countBadge.innerText = '5★ GOOGLE LINK GENERATED';
+      } else {
+        stepRating?.classList.add('hidden');
+        stepPrivate?.classList.remove('hidden');
+      }
+    });
+  });
+
+  // 1-3 Star Form Submit -> Google Apps Script + Private Dispatch Alert Row
+  const privateForm = document.getElementById('private-feedback-form');
+  const submitBtn = document.getElementById('feedback-submit-btn');
+
+  privateForm?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.textContent = '[ SENDING ALERT... ]';
+    }
+
+    const notesVal = document.getElementById('feedback-notes').value.trim();
+    const contactVal = document.getElementById('feedback-contact').value.trim() || 'Homeowner';
+
+    const payload = {
+      client_id: clientId || 'plumbers',
+      business_name: activeClient.name,
+      customer_name: recipientName || contactVal,
+      customer_contact: contactVal,
+      rating: '1-3 Stars',
+      notes: notesVal
+    };
+
+    try {
+      const WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbxlFZ4_V9ePlXOnDixOiw2p6b2c4lXhdremiePpT33nKWgoflwc6W0onUPouaZ6CVFO/exec';
+      await fetch(WEB_APP_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+    } catch (err) {
+      console.error('Submission failed', err);
+    }
+
+    interceptedCount++;
+    if (kpiIntercepted) kpiIntercepted.innerText = `${interceptedCount} JOBS`;
+
+    const newRow = document.createElement('tr');
+    newRow.className = 'cursor-pointer hover:bg-neutral-900 transition-colors feedback-row';
+    newRow.dataset.guest = contactVal;
+    newRow.dataset.rating = '1–3★ Issue Reported';
+    newRow.dataset.route = 'Directed to Office -> Priority Action';
+    newRow.dataset.contact = contactVal;
+    newRow.dataset.time = 'Just now • Live Office Alert';
+    newRow.dataset.notes = notesVal;
+
+    newRow.innerHTML = `
+      <td class="py-4 px-4 font-bold text-[#FF5500] border-r border-neutral-800 guest-name-cell">${contactVal}</td>
+      <td class="py-4 px-4 text-[#FF5500] font-bold border-r border-neutral-800">[1–3★ SNAG]</td>
+      <td class="py-4 px-4 text-neutral-300 border-r border-neutral-800">OFFICE INTERCEPT</td>
+      <td class="py-4 px-4 text-right"><span class="bg-[#FF5500] text-[#050505] font-bold px-2 py-1 text-[10px] uppercase">NEW ALERT</span></td>
+    `;
+
+    bindRowClick(newRow);
+    tableBody?.prepend(newRow);
+    newRow.click();
+
+    if (countBadge) countBadge.innerText = 'SNAG ROUTED TO DISPATCH';
+
+    stepPrivate?.classList.add('hidden');
+    stepCompleted?.classList.remove('hidden');
+    privateForm.reset();
+
+    if (submitBtn) {
+      submitBtn.disabled = false;
+      submitBtn.textContent = '[ ALERT OFFICE DISPATCH NOW → ]';
+    }
+  });
+</script>
